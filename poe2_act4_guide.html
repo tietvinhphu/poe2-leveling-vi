@@ -1,0 +1,321 @@
+<!--
+  PoE2 Leveling Campaign & Endgame Guide — Act IV — Keth to Nightmare of the King
+  Copyright (c) 2026 domistae
+  Licensed under the MIT License — see LICENSE for the full text.
+  Original source: https://github.com/domistae/poe2-leveling (English)
+  Vietnamese translation: https://github.com/tietvinhphu/poe2-leveling-vi
+  Live site (Vietnamese): https://tietvinhphu.github.io/poe2-leveling-vi/
+
+  You are free to use, modify, and redistribute this code, including for commercial purposes.
+  You MUST preserve this notice and provide attribution to the original source.
+  See README.md for full attribution requirements.
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Hướng dẫn Act 4 PoE 2 — Kingsmarch &amp; Bốn hòn đảo (Patch 0.5.5)</title>
+    <meta name="description" content="Hướng dẫn Act 4 Path of Exile 2 có theo dõi tiến độ. Lộ trình tối ưu qua bốn hòn đảo, Magma Twins, Mimok, Omniphobia +2 skill point. Patch 0.5.5 (Forbidden Rites).">
+    <meta name="author" content="domistae">
+    <meta name="theme-color" content="#181410">
+    <link rel="canonical" href="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_act4_guide.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hướng dẫn Leveling PoE 2">
+    <meta property="og:title" content="Hướng dẫn Act 4 PoE 2 — Kingsmarch & Bốn hòn đảo (Patch 0.5.5)">
+    <meta property="og:description" content="Lộ trình Act 4 tối ưu có theo dõi tiến độ — cả bốn hòn đảo, Magma Twins, Omniphobia +2 skill point. Patch 0.5.5.">
+    <meta property="og:url" content="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_act4_guide.html">
+    <meta property="og:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hướng dẫn Act 4 Path of Exile 2 — Kingsmarch và bốn hòn đảo (Patch 0.5.5)">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hướng dẫn Act 4 PoE 2 — Kingsmarch & Bốn hòn đảo (Patch 0.5.5)">
+    <meta name="twitter:description" content="Lộ trình Act 4 tối ưu có theo dõi tiến độ — cả bốn hòn đảo, Magma Twins, Omniphobia +2 skill point. Patch 0.5.5.">
+    <meta name="twitter:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="assets/site.js"></script>
+    <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/checklist.css">
+    <link rel="stylesheet" href="assets/skin.css">
+    <link rel="stylesheet" href="assets/act.css">
+</head>
+<body class="act-page" data-progress-key="poe2-act4-v05" data-reset-label="Act IV">
+    <header class="site-head">
+        <div class="site-head-row">
+            <a href="index.html" class="brand">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2 L21 12 L12 22 L3 12 Z"/><path d="M12 7 L16 12 L12 17 L8 12 Z"/></svg>
+                <span>POE2 CODEX</span>
+            </a>
+            <nav class="site-nav" aria-label="Chính">
+                <a href="poe2_leveling_guide.html" class="site-nav-link current">Leveling</a>
+                <a href="poe2_endgame_guide.html" class="site-nav-link">Endgame</a>
+                <a href="poe2_league_guide.html" class="site-nav-link">League</a>
+                <a href="https://github.com/tietvinhphu/poe2-leveling-vi" class="site-nav-link">GitHub</a>
+                <button type="button" class="theme-toggle" aria-label="Đổi giao diện">
+                    <span class="icon" id="theme-icon">☾</span> <span id="theme-label">Đêm</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="act-strip" aria-label="Các Act">
+        <div class="act-strip-row">
+            <div class="act-tabs">
+            <a href="poe2_act1_guide.html" class="act-tab">Act I</a> <a href="poe2_act2_guide.html" class="act-tab">Act II</a> <a href="poe2_act3_guide.html" class="act-tab">Act III</a> <a href="poe2_act4_guide.html" class="act-tab current" aria-current="page">Act IV</a> <a href="poe2_interludes_guide.html" class="act-tab">Interlude</a> <span class="act-tab coming" title="Ra mắt cùng bản 1.0">Act V</span> <span class="act-tab coming" title="Ra mắt cùng bản 1.0">Act VI</span>
+            </div>
+            <div class="act-progress" title="Số bước đã xong trên trang này"><span class="act-progress-count" id="actProgressText">0 / 0</span><span class="act-progress-bar" aria-hidden="true"><span id="actProgressBar"></span></span><button type="button" class="act-reset" id="resetProgress" title="Xóa tiến độ trên trang này">Đặt lại</button></div>
+        </div>
+    </nav>
+
+    <div class="act-top">
+        <section class="act-head">
+            <div class="act-title"><span class="act-num">IV</span><h1>Wraeclast Awakens</h1><span class="act-meta">Lvl 42–52 · mọi class · 0.5.5</span></div>
+            <div class="act-filters" role="group" aria-label="Bộ lọc">
+                <button type="button" class="view-chip" data-view="hide-completed" aria-pressed="false" title="Ẩn các bước bạn đã tick xong">Ẩn mục đã xong</button>
+                <button type="button" class="view-chip" data-view="alt-leveling" aria-pressed="false" title="Chạy rút gọn: chỉ các bước cần thiết, mọi mục đánh dấu (Tùy chọn) đều bị ẩn">Chạy rút gọn</button>
+                <button type="button" class="view-chip league" data-view="league-notes" aria-pressed="true" title="Hiện hoặc ẩn ghi chú chỉ dành cho league">Ghi chú league</button>
+            </div>
+        </section>
+        <div class="act-rewards">
+            <span class="act-rewards-label">Phần thưởng Act</span> <span class="act-chip">+4 Skill Points</span> <span class="act-chip">+5% Max Mana</span> <span class="act-chip">Chọn Tattoo</span> <span class="act-chip">Hideout</span> <span class="act-legend" role="group" aria-label="Bảng màu"> <span class="lg-boss">Boss</span><span class="lg-npc">NPC</span><span class="lg-loc">Địa điểm</span><span class="lg-gem">Gem</span><span class="lg-perm">Vĩnh viễn</span> </span>
+        </div>
+    </div>
+
+    <div class="container act-body">
+        <aside class="act-side">
+            <nav class="zone-rail" id="zoneRail" aria-label="Các zone"></nav>
+        </aside>
+
+        <main class="main">
+
+            <details class="info-box" style="border-left: 3px solid var(--steel); margin-bottom: 1.5rem;">
+                <summary style="color: var(--steel);">Ghi chú lộ trình</summary>
+                <ul class="tip-list">
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Weapon Fragment và Matiki được <strong>xáo ngẫu nhiên</strong> giữa bốn hòn đảo ở mỗi league — thoại ở Kingsmarch sẽ cho bạn biết ở đâu</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> <strong>Matiki bị giam trong một cái lồng</strong> trên đảo — bạn phải bấm vào lồng để giải cứu cô ấy mới đi tiếp được (sau đó cô ấy chờ ở giếng Eye of Hinekora)</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Magma Twins (Volcanic Warrens) — <strong>thứ tự hạ quan trọng</strong>: Lightning trước → Ruby Ring · Fire trước → Topaz Ring</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Mimok the Enslaved (Isle of Kin) rơi một <strong>Support Gem Tier 4 đảm bảo</strong></li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Tattoo ở Halls of the Dead: chọn <strong>+5% Fire/Cold/Lightning Resistance</strong> cho đa số build (phương án thay thế Str/Dex/Int để đủ ngưỡng chỉ số)</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Eye of Hinekora — <strong>rương ẩn sau thác nước</strong> = Spirit Gem Lv12</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Blind Beast (Isle of Kin) rơi <strong>Greater Blank Rune</strong> (skill point đã chuyển sang Omniphobia)</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> <strong>0.5:</strong> Greater Orb of Transmutation / Augmentation giờ có thể bắt đầu rơi ở Act 4 (mod level tối thiểu giảm từ 55 xuống 44)</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> <strong>0.5:</strong> mật độ quái giảm ở nửa sau campaign — Act 4 tương đối nhiều XP, nhưng nhịp chung vẫn chặt dần</li>
+                </ul>
+            </details>
+
+
+            <!-- KINGSMARCH -->
+            <div class="zone-header" id="kingsmarch">Kingsmarch <span class="wp town">HUB TOWN</span> <span class="lvl">Lvl 42</span></div>
+            <div class="step" data-step="1"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Doryani</span></div></div>
+            <div class="step" data-step="2"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tiếp tục vào town, nói chuyện với <span class="npc">Alva</span> (cùng Rog)</div></div>
+            <div class="step" data-step="3"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Tujen</span> → nhận quest</div></div>
+            <div class="note tip"><span class="label">0.5</span><span class="npc">Rog</span> không làm gì ở patch này — việc thuê thuyền do <span class="npc">Makoru</span> xử lý (bước bên dưới).</div>
+            <div class="step" data-step="4"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Farrow</span> → nhận quest <span class="item">Runeseeker</span> <span class="reward-tag craft">Mở khóa Verisium Anvil</span></div></div>
+            <div class="note change"><span class="label">0.5.5 Verisium Anvil</span>Ngoài Runes of Aldur — tức là ở <strong>Forbidden Rites</strong> và Standard — chuỗi Act 4 này là cách <strong>duy nhất</strong> để mở khóa <span class="npc">Verisium Anvil</span>. Khi đã mở, <span class="npc">Farrow</span> có thể được đặt trong <strong>Hideout ở mọi league</strong>, và Farrow / Dannig / Expedition trở thành <strong>nội dung Atlas cốt lõi</strong>, kể cả Standard.</div>
+            <div class="note warn"><span class="label">Chưa kiểm chứng</span>Notes 0.5.5 gọi quest này là <strong>"The Runeseeker"</strong> và chỉ xác nhận việc mở khóa <strong>Verisium Anvil</strong>; danh sách bước bên dưới vẫn dùng tên cũ của 0.5 là <strong>"Runekeeper"</strong>. Việc <strong>13 Ancient Rune</strong> có còn đi kèm ngoài Runes of Aldur hay không thì chưa được nêu — hãy tự kiểm chứng trong game.</div>
+            <div class="note tip"><span class="label">Lưu ý</span><span class="npc">Farrow</span> không làm gì thêm ở đây — quest chỉ hoàn thành sau đó ở <strong>Deserted Post</strong> tại Plunder's Point.</div>
+            <div class="note league" data-league="runes-of-aldur">Bậc thang Runeforging theo từng act — Armour Runeforging → Runic Inscriptions → Unique Runeforging → <strong>Ancient Runes</strong> — chỉ có trong league. Act 4 không có Runestone; điều kiện ở đây là các <strong>Torn Map Piece (tổng 4)</strong>.</div>
+            <div class="step" data-step="5"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Makoru</span> trên tàu, chọn điểm đến</div></div>
+
+            <!-- WHAKAPANU ISLAND -->
+            <div class="zone-header" id="whakapanu">Whakapanu Island <span class="frag">FRAG/MATIKI?</span> <span class="map">MAP</span> <span class="lvl">Lvl 42–43</span></div>
+            <div class="step" data-step="6"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="item">Petrified Pirate</span> ven biển <span class="reward-tag map">Torn Map (tổng 4)</span></div></div>
+            <div class="step" data-step="7"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Shark Pit: <span class="boss">Great White One</span> <span class="reward-tag optional">Shark Fin</span></div></div>
+            <div class="note tip"><span class="label">Shark Fin</span>Đưa <strong>Shark Fin</strong> cho <span class="npc">Kaimana</span> để hoàn thành <em>Tribal Medicine</em> — ở <span class="loc">Ngakanu</span> nếu làm sớm, hoặc ở bến tàu <strong>sau khi hạ Tavakai</strong> nếu các đảo đã bị tha hóa. Phần thưởng: chọn một <strong>Uncut Gem Lv11</strong> (Skill / Spirit / Support) + một phước lành chỉ số Tukuama vĩnh viễn.</div>
+            <div class="step" data-step="8"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Crabshell Cavern: <span class="boss">Clawcrunch</span> <span class="reward-tag gem">Support Gem 4</span></div></div>
+            <div class="step" data-step="9"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Singing Caverns</span></div></div>
+
+            <div class="zone-header">Singing Caverns <span class="wp">WAYPOINT</span></div>
+            <div class="step" data-step="10"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Beckoning Clam</span> → <span class="item">Humming Pearl</span> (đưa cho Rog)</div></div>
+            <div class="step" data-step="11"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Diamora, Song of Death</span> <span class="reward-tag frag">Fragment?</span></div></div>
+            <div class="step" data-step="12"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Hooded One</span>, TP về town</div></div>
+
+            <div class="zone-header">Kingsmarch — Hideout</div>
+            <div class="step" data-step="13"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Ange</span> → <span class="loc">Shoreline Hideout</span></div></div>
+            <div class="step" data-step="14"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Dọn hideout, nói chuyện với <span class="npc">Ange</span> <span class="reward-tag perm">Hideout + Giao dịch</span></div></div>
+
+            <!-- SHRIKE ISLAND -->
+            <div class="zone-header" id="shrike">Shrike Island <span class="frag">FRAG/MATIKI?</span> <span class="map">MAP</span> <span class="lvl">Lvl 43–44</span></div>
+            <div class="step" data-step="15"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="item">Corpse Nest</span> (Impaled Karui) <span class="reward-tag map">Torn Map (tổng 4)</span></div></div>
+            <div class="step" data-step="16"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Scourge of the Skies</span> <span class="reward-tag frag">Fragment?</span></div></div>
+            <div class="step" data-step="17"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Hooded One</span>, TP, rồi chèo thuyền tiếp</div></div>
+
+            <!-- ABANDONED PRISON -->
+            <div class="zone-header" id="prison">Abandoned Prison <span class="frag">FRAG/MATIKI?</span> <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 44</span></div>
+            <div class="step" data-step="18"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ quái cho tới khi <span class="item">Chapel Key</span> rơi ra</div></div>
+            <div class="step" data-step="19"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Khu phụ: <span class="loc">Armoury</span> (hạ elite lấy Jewel + Blackstone) &amp; <span class="loc">Forgotten Cells</span> (loot)</div></div>
+            <div class="step" data-step="20"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Mở Chapel, hạ <span class="boss">Forael</span>, dùng <span class="item">Goddess of Justice</span> <span class="reward-tag choice">Chọn flask</span></div></div>
+            <div class="step" data-step="21"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Solitary Confinement</span></div></div>
+
+            <div class="zone-header">Solitary Confinement</div>
+            <div class="step" data-step="22"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">The Prisoner</span> <span class="reward-tag frag">Fragment?</span></div></div>
+            <div class="step" data-step="23"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Hooded One</span>, chèo thuyền tới <span class="loc">Isle of Kin</span></div></div>
+
+            <!-- ISLE OF KIN -->
+            <div class="zone-header" id="isleofkin">Isle of Kin <span class="frag">MATIKI?</span> <span class="map">MAP</span> <span class="lvl">Lvl 45</span></div>
+            <div class="step" data-step="24"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="item">Flayed Sailor</span> gần bờ <span class="reward-tag map">Torn Map (tổng 4)</span></div></div>
+            <div class="step" data-step="25"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Doomed Mine</span> — điểm đào bỏ hoang (Fossilised Formation) <span class="reward-tag optional">Lesser Jeweller's Orb</span></div></div>
+            <div class="step" data-step="26"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Beast Pen <span class="reward-tag gem">Skill + Support Gem</span></div></div>
+            <div class="step" data-step="27"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><strong>Hạ <span class="boss">Mimok the Enslaved</span></strong> (boss Beast Pen) <span class="reward-tag gem">Support Gem Tier 4</span></div></div>
+            <div class="step" data-step="28"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Primal Arena: <span class="boss">Blind Beast</span> <span class="reward-tag optional">Greater Blank Rune</span></div></div>
+            <div class="step" data-step="29"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Volcanic Warrens</span></div></div>
+
+            <!-- VOLCANIC WARRENS -->
+            <div class="zone-header" id="volcanic">Volcanic Warrens <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 45–46</span></div>
+            <div class="step" data-step="30"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Volcanic Nest: <span class="boss">Magma Twins</span> — <strong>thứ tự hạ quan trọng</strong>: Lightning trước → Ruby Ring · Fire trước → Topaz Ring <span class="reward-tag optional">Ruby / Topaz Ring</span></div></div>
+            <div class="step" data-step="31"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Krutog, Lord of Kin</span> (<span class="loc">The Tyrant Throne</span>)</div></div>
+            <div class="step" data-step="32"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về <span class="loc">Kingsmarch</span></div></div>
+
+            <!-- EYE OF HINEKORA -->
+            <div class="zone-header" id="hinekora">Eye of Hinekora <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 46–47</span></div>
+            <div class="step" data-step="33"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Matiki</span> ở giếng (anh ta ở giếng, không ở town), bấm vào giếng</div></div>
+            <div class="step" data-step="34"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Rương sau thác nước <span class="reward-tag gem">Spirit Gem 12</span></div></div>
+            <div class="step" data-step="35"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hoàn thành 3 bài thử: <span class="item">Fire</span>, <span class="item">Nature</span>, <span class="item">Cold</span></div></div>
+            <div class="step" data-step="36"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Altar ở <span class="loc">Silent Hall</span> (Pay Respects), nói chuyện với <span class="npc">Navali</span> <span class="reward-tag perm">+5% Max Mana</span></div></div>
+            <div class="step" data-step="37"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Halls of the Dead</span></div></div>
+
+            <!-- HALLS OF THE DEAD -->
+            <div class="zone-header" id="halls">Halls of the Dead <span class="lvl">Lvl 47</span></div>
+            <div class="step" data-step="38"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Trial of Ngakanu (3 bài thử hình cỏ ba lá), nhặt <span class="item">Tattoo</span> — chọn <span class="reward-tag perm">+5% Fire/Cold/Lightning Res (khuyến nghị)</span> hoặc +5 Str/Dex/Int</div></div>
+            <div class="step" data-step="39"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đánh <span class="boss">Yama the White</span> (ít máu — dễ làm choáng)</div></div>
+            <div class="step" data-step="40"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Trial of Ancestors</span></div></div>
+
+            <div class="zone-header">Trial of the Ancestors <span class="lvl">Lvl 47–48</span></div>
+            <div class="step" data-step="41"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Navali</span> &amp; <span class="npc">Hinekora</span> <span class="reward-tag perm">+2 Skill Points</span></div></div>
+            <div class="step" data-step="42"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP, chèo thuyền tới <span class="loc">Kedge Bay</span></div></div>
+
+            <!-- KEDGE BAY -->
+            <div class="zone-header" id="kedge">Kedge Bay <span class="map">MAP</span> <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 47–48</span></div>
+            <div class="step" data-step="43"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="item">Dead Man's Chest</span> / <span class="item">Smuggler's Stash</span> <span class="reward-tag map">Torn Map (tổng 4)</span></div></div>
+            <div class="step" data-step="44"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Abandoned Ship</span> (loot)</div></div>
+            <div class="step" data-step="45"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Tidal Cay</span> có <span class="boss">Tombgrowl</span> (loot)</div></div>
+            <div class="step" data-step="47"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="boss">Doran, the Deft</span> — Rogue Exile khó nhằn, cơ động cao, gần lối vào (loot)</div></div>
+            <div class="step" data-step="46"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Journey's End</span></div></div>
+
+            <!-- JOURNEY'S END -->
+            <div class="zone-header" id="journey">Journey's End <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 48–49</span></div>
+            <div class="step" data-step="48"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Tujen</span></div></div>
+            <div class="step" data-step="49"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Captain Harlin</span>, nhặt <span class="item">Verisium</span></div></div>
+            <div class="step" data-step="50"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Freya Hartlin</span></div></div>
+            <div class="step" data-step="51"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Town → <span class="npc">Dannig</span> → <span class="item">Verisium Spikes</span></div></div>
+            <div class="step" data-step="52"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Quay lại Journey's End → <span class="npc">Freya</span></div></div>
+            <div class="step" data-step="53"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><strong>Totem → hạ <span class="boss">Omniphobia</span></strong></div></div>
+            <div class="step" data-step="54"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Tujen</span> ở town để nhận thưởng <span class="reward-tag perm">+2 Skill Points</span></div></div>
+
+            <div class="zone-header">Plunder's Point</div>
+            <div class="note change"><span class="label">Điều kiện 0.5</span>Chỉ vào được Plunder's Point sau khi bạn đã nộp <strong>đủ 4 Map Piece</strong> tại Kingsmarch (Torn Map từ Whakapanu, Shrike, Isle of Kin, Kedge Bay).</div>
+            <div class="note warning"><span class="label">Bắt buộc — đừng bỏ qua</span>Đây là quest <strong>Runekeeper / Runeseeker</strong> và là chặng bị bỏ qua nhiều nhất trong chuỗi. Chuyến thám hiểm Plunder's Point mở <strong>Deserted Post</strong> → <strong>triệu hồi <span class="npc">Farrow</span></strong> → <strong>Runesmithing of Knowledge</strong>. Ở Forbidden Rites và Standard, đây là thứ mở khóa <strong>Verisium Anvil</strong> — bỏ qua là bạn mất quyền dùng Runeforging hoàn toàn.</div>
+            <div class="step" data-step="55"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đưa 4 map cho <span class="npc">Makoru</span> → chèo thuyền → <span class="npc">Dannig</span> → Expedition → <span class="loc">Deserted Post</span> → triệu hồi <span class="npc">Farrow</span></div></div>
+
+            <!-- ARASTAS -->
+            <div class="zone-header" id="arastas">Arastas <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 49–50</span></div>
+            <div class="step" data-step="56"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="npc">Missionari Lorandis</span> → đi theo → phá khiên</div></div>
+            <div class="step" data-step="57"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Evening / Morning Bells</span> <span class="reward-tag optional">Evening → 3 Exalted · Morning → 3 Regal</span></div></div>
+            <div class="step" data-step="58"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Torvian</span> → vào <span class="loc">Excavation</span></div></div>
+            <div class="note tip"><span class="label">Chiến thuật</span>Để <span class="boss">Torvian</span> ném đá vào 2 thầy tu ở trên để mở màn trận đánh.</div>
+
+            <!-- EXCAVATION -->
+            <div class="zone-header" id="excavation">The Excavation <span class="lvl">Lvl 50–51</span></div>
+            <div class="step" data-step="59"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Benedictus</span> (<span class="loc">Precursor Forge</span>), nói chuyện với <span class="npc">Hooded One</span></div></div>
+            <div class="step" data-step="60"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Excavated Cache</span> ở checkpoint (loot)</div></div>
+            <div class="step" data-step="61"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về <span class="loc">Kingsmarch</span> → chèo thuyền tới <span class="loc">Ngakanu</span></div></div>
+
+            <!-- NGAKANU -->
+            <div class="zone-header" id="ngakanu">Ngakanu <span class="lvl">Lvl 51</span></div>
+            <div class="step" data-step="63"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Abyss</span> → <span class="loc">Abyssal Depths</span> (loot)</div></div>
+            <div class="step" data-step="64"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="boss">Mad Butcher</span> trong túp lều lớn (loot)</div></div>
+            <div class="step" data-step="62"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Heart of the Tribe</span></div></div>
+
+            <!-- HEART OF THE TRIBE -->
+            <div class="zone-header" id="finale">Heart of the Tribe <span class="lvl">Lvl 52</span></div>
+            <div class="step" data-step="65"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Meeting House</span> trong Heart of the Tribe có rương (loot)</div></div>
+            <div class="step" data-step="66"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><strong>Hạ <span class="boss">Tavakai</span></strong> (Boss cuối Act 4), nói chuyện với hắn</div></div>
+            <div class="step" data-step="67"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Quay về, nói chuyện với <span class="npc">Hooded One</span> → mở khóa Interlude</div></div>
+
+            <div class="footer-nav">
+                <a href="poe2_act3_guide.html">← Act III</a> <a href="index.html">Mục lục</a> <a href="poe2_interludes_guide.html">Interlude →</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer act-footer">
+        <div class="act-footer-row">
+            <span>Không chính thức, do fan làm. Path of Exile 2 thuộc bản quyền © Grinding Gear Games.</span> <span class="act-footer-links"><a href="https://github.com/tietvinhphu/poe2-leveling-vi/issues/new">Góp ý</a><a href="https://github.com/tietvinhphu/poe2-leveling-vi">GitHub</a></span>
+        </div>
+    </footer>
+    <script src="assets/league.js" defer></script>
+    <script src="assets/progress.js" defer></script>
+</body>
+</html>

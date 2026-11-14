@@ -1,0 +1,370 @@
+<!--
+  PoE2 Leveling Guide — Campaign Acts I–IV & Interludes
+  Copyright (c) 2026 domistae
+  Licensed under the MIT License — see LICENSE for the full text.
+  Source: https://github.com/tietvinhphu/poe2-leveling-vi
+  Live site: https://tietvinhphu.github.io/poe2-leveling-vi/poe2_leveling_guide.html
+
+  You are free to use, modify, and redistribute this code, including for commercial purposes.
+  You MUST preserve this notice and provide attribution to the original source.
+  See README.md for full attribution requirements.
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Hướng dẫn Leveling PoE2 0.5.5 — Checklist tương tác Campaign Act I–IV</title>
+    <meta name="description" content="PoE2 Patch 0.5.5 (Forbidden Rites): hướng dẫn leveling Path of Exile 2 tương tác, miễn phí, cho Act I–IV và các Interlude. Waypoint, skill point, phần thưởng và lộ trình tối ưu cho mọi class.">
+    <meta name="author" content="domistae">
+    <meta name="theme-color" content="#181410">
+    <link rel="canonical" href="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_leveling_guide.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Hướng dẫn Leveling PoE2 (Tiếng Việt)">
+    <meta property="og:title" content="Hướng dẫn Leveling PoE2 0.5.5 — Checklist tương tác Campaign Act I–IV">
+    <meta property="og:description" content="PoE2 Patch 0.5.5 (Forbidden Rites): hướng dẫn leveling Path of Exile 2 tương tác, miễn phí, cho Act I–IV và các Interlude. Waypoint, skill point, phần thưởng và lộ trình tối ưu cho mọi class.">
+    <meta property="og:url" content="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_leveling_guide.html">
+    <meta property="og:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hướng dẫn Leveling Path of Exile 2 — Checklist tương tác cho Patch 0.5.5 Forbidden Rites">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hướng dẫn Leveling PoE2 0.5.5 — Checklist tương tác Campaign Act I–IV">
+    <meta name="twitter:description" content="PoE2 Patch 0.5.5 (Forbidden Rites): hướng dẫn leveling Path of Exile 2 tương tác, miễn phí, cho Act I–IV và các Interlude. Waypoint, skill point, phần thưởng và lộ trình tối ưu cho mọi class.">
+    <meta name="twitter:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="assets/site.js"></script>
+    <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/checklist.css">
+    <style>
+
+/* ─── SIDEBAR ──────────────────────────────────────────────── */
+.sidebar {
+    width: 240px;
+    background: var(--bg-surface);
+    border-right: 1px solid var(--border-subtle);
+    padding: 1.25rem 1rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Sidebar buttons */
+.reset-btn, .export-btn, .import-btn {
+    width: 100%; background: var(--bg-elevated); border: 1px solid var(--border-subtle);
+    color: var(--text-muted); padding: 0.45rem; border-radius: 2px; cursor: pointer;
+    font-size: 0.6875rem; transition: all 0.15s; margin-top: 0.4rem;
+    font-family: var(--font-body); letter-spacing: 0.3px;
+}
+.reset-btn:hover { background: var(--overlay-gold-soft); color: var(--text-primary); border-color: var(--gold); }
+.export-btn { color: var(--sage); }
+.export-btn:hover { background: var(--overlay-sage); border-color: var(--sage); }
+.import-btn { color: var(--steel); }
+.import-btn:hover { background: var(--overlay-steel); border-color: var(--steel); }
+
+/* ─── MAIN ─────────────────────────────────────────────────── */
+.main { margin-left: 240px; flex: 1; padding: 1.75rem 2.25rem; max-width: 940px; }
+
+/* Steps */
+.step {
+    display: flex;
+    background: var(--bg-surface);
+    margin-bottom: 1px;
+    transition: all 0.15s;
+    border-left: 2px solid transparent;
+    border-radius: 0;
+}
+
+/* ─── INDEX-SPECIFIC ───────────────────────────────────────── */
+.index-container {
+    max-width: 1080px; margin: 0 auto;
+    padding: 2.25rem 1.5rem 4rem; position: relative; z-index: 1;
+}
+
+@media (max-width: 700px) {
+    .top-nav-link { padding: 0 0.5rem; font-size: 0.75rem; }
+}
+/* Left-aligned major section heading with a rule — reads as a real title
+   rather than the small centred quest-log label. */
+.section-title {
+    font-family: var(--font-display); color: var(--gold);
+    font-size: 1rem; letter-spacing: 2.2px; text-transform: uppercase;
+    /* --gold only reaches 3.1 on the light ground; the deeper gold clears AA.
+       Same swap index.html already makes for .codex-wordmark. */
+    font-weight: 600; text-align: left;
+    margin: 2.75rem 0 0.9rem; padding-bottom: 0.55rem;
+    border-bottom: 1px solid var(--border-accent);
+}
+:root:not([data-theme="dark"]) .section-title { color: var(--gold-deep); }
+.section-title .sub {
+    display: block; font-family: var(--font-body); font-size: 0.6875rem;
+    letter-spacing: 0.4px; text-transform: none; font-weight: 400;
+    color: var(--text-body); margin-top: 0.3rem;   /* --text-muted lands at 4.49, just under AA */
+}
+/* Section intro paragraphs run the full container width */
+.section-intro {
+    font-size: 0.78125rem; color: var(--text-body);
+    margin: 0 0 1.25rem; line-height: 1.6;
+}
+
+/* Subtle inner vignette on league tiles */
+
+/* ─── MOBILE ───────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .sidebar {
+        position: relative; width: 100%; height: auto;
+        border-right: none; border-bottom: 1px solid var(--border-subtle);
+    }
+    .container { flex-direction: column; }
+    .main { margin-left: 0; padding: 1.25rem 1rem; max-width: 100%; }
+}
+
+    
+
+/* ── Disclaimer block ─────────────────────────────────────── */
+.disclaimer-block {
+    margin: 3rem 0 1.5rem;
+    padding: 1.5rem 0 0;
+    border-top: 1px solid var(--border-subtle);
+}
+.disclaimer-block h3 {
+    font-family: var(--font-display);
+    color: var(--text-primary);
+    font-size: 0.71875rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 0 0.55rem;
+    font-weight: 600;
+    text-align: center;
+}
+.disclaimer-block h3:not(:first-child) { margin-top: 1.4rem; }
+.disclaimer-block p {
+    font-size: 0.65625rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin: 0 0 0.55rem;
+    /* no max-width — fill the container, no false right indent */
+}
+.disclaimer-block p:last-child { margin-bottom: 0; }
+.disclaimer-block strong { color: var(--text-body); font-weight: 600; }
+.disclaimer-block a { color: var(--gold); text-decoration: underline; }
+.disclaimer-block a:hover { color: var(--gold-deep); }
+
+
+    </style>
+    <link rel="stylesheet" href="assets/skin.css">
+</head>
+<body class="backdrop-leveling">
+    <button type="button" class="theme-toggle" aria-label="Đổi giao diện">
+        <span class="icon" id="theme-icon">☀</span> <span id="theme-label">Sáng</span>
+    </button>
+
+    <nav class="top-nav" aria-label="Điều hướng chính">
+        <a href="index.html" class="top-nav-home">← Trang chủ</a>
+        <div class="top-nav-links">
+            <a href="poe2_leveling_guide.html" class="top-nav-link current" aria-current="page">Leveling</a> <a href="poe2_endgame_guide.html" class="top-nav-link">Endgame</a> <a href="poe2_league_guide.html" class="top-nav-link">League</a>
+        </div>
+    </nav>
+
+    <div class="index-container">
+        <header class="header">
+            <h1>Hướng dẫn Leveling POE 2</h1>
+            <div class="subtitle">Act I–IV · Interlude · Mọi Class</div>
+            <div class="version">Patch 0.5.5 · Forbidden Rites · event league, chạy đến bản 1.0</div>
+        </header>
+
+        <!-- ╔══ PATCH 0.5 · COMBINED NOTICE ═══════════════════════════════════ ╗ -->
+        <div class="endgame-banner" style="border-left-color: var(--plum); margin-bottom: 1.5rem; padding-top: 0.85rem; padding-bottom: 0.85rem;">
+            <div>
+                <span class="label">Patch 0.5.5 · Forbidden Rites</span>
+                <ul style="margin: 0.5rem 0 0; padding-left: 1.1rem; font-size: 0.78125rem; line-height: 1.65;">
+                    <li><strong>Tất cả act</strong> — đã cập nhật &amp; kiểm chứng phần thưởng, drop và lộ trình (mẹo speedrun vẫn cần kiểm tra lại)</li>
+                    <li><strong>Interlude</strong> — đã cập nhật &amp; kiểm chứng cho 0.5 (5.1–5.3 làm lại, đi theo thứ tự tùy ý, Fate of the Vaal)</li>
+                    <li>Đang <strong>rút gọn mọi trang</strong> — ít chữ hơn, dễ đọc hơn</li>
+                </ul>
+            </div>
+            <div style="margin-top: 0.65rem; padding-top: 0.55rem; border-top: 1px dotted var(--border-subtle);">
+                <small style="opacity: 0.85; font-size: 0.6875rem; color: var(--text-muted);"> AI hỗ trợ, cộng đồng kiểm chứng · Thấy sai sót? <a href="https://github.com/tietvinhphu/poe2-leveling-vi/issues/new">mở một issue</a>. </small>
+            </div>
+        </div>
+        <!-- ╚═══════════════════════════════════════════════════════════════════ ╝ -->
+
+        <!-- ╔══ CAMPAIGN ════════════════════════════════════════════════ ╗ -->
+        <div class="quest-log-title">Tiến độ Campaign</div>
+
+        <div class="journey">
+            <div class="act-entry">
+                <a href="poe2_act1_guide.html" class="act-link">
+                    <div class="act-header">
+                        <span class="act-name">Act I — Clearfell đến Ogham</span> <span class="act-meta">Lvl 1–14 · ~65 bước</span>
+                    </div>
+                    <div class="act-rewards">
+                        <span class="reward">+4 Skill Points</span> <span class="reward">+30 Spirit</span> <span class="reward">+20 Life</span> <span class="reward res">+10% Cold Res</span> <span class="reward special">Salvage Bench</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="act-entry">
+                <a href="poe2_act2_guide.html" class="act-link">
+                    <div class="act-header">
+                        <span class="act-name">Act II — Vastiri đến Dreadnought</span> <span class="act-meta">Lvl 14–29 · ~78 bước</span>
+                    </div>
+                    <div class="act-rewards">
+                        <span class="reward">+4 Skill Points</span> <span class="reward res">+10% Lightning Res</span> <span class="reward special">Ascendancy thứ 1</span> <span class="reward special">+1 Charm Slot</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="act-entry">
+                <a href="poe2_act3_guide.html" class="act-link">
+                    <div class="act-header">
+                        <span class="act-name">Act III — Sandswept đến Ziggurat</span> <span class="act-meta">Lvl 30–42 · ~87 bước</span>
+                    </div>
+                    <div class="act-rewards">
+                        <span class="reward">+4 Skill Points</span> <span class="reward">+30 Spirit</span> <span class="reward res">+10% Fire Res</span> <span class="reward special">Ascendancy thứ 2</span> <span class="reward warn">Lựa chọn vĩnh viễn</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="act-entry">
+                <a href="poe2_act4_guide.html" class="act-link">
+                    <div class="act-header">
+                        <span class="act-name">Act IV — Karui Archipelago</span> <span class="act-meta">Lvl 42–52 · ~67 bước</span>
+                    </div>
+                    <div class="act-rewards">
+                        <span class="reward">+4 Skill Points</span> <span class="reward">+5% Max Mana</span> <span class="reward special">Chọn Tattoo</span> <span class="reward special">Hideout</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="act-entry final">
+                <a href="poe2_interludes_guide.html" class="act-link">
+                    <div class="act-header">
+                        <span class="act-name">Interlude — V.1, V.2, V.3</span> <span class="act-meta">Lvl 52–59 · Bảng tra phần thưởng</span>
+                    </div>
+                    <div class="act-rewards">
+                        <span class="reward">+8 Skill Points</span> <span class="reward">+5% Max Life</span> <span class="reward">+40 Spirit</span> <span class="reward special">Unique miễn phí</span> <span class="reward special">7 Boon</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- ╔══ FORBIDDEN RITES · CURRENT LEAGUE MECHANIC ═════════════════════ ╗ -->
+        <!-- Plum = TEMPORARY league content. Replace this whole block when the
+             league rotates; nothing else on the site should carry plum. -->
+        <div class="section-title">Forbidden Rites — Cơ chế League<span class="sub">Patch 0.5.5 · nội dung event league tạm thời</span></div>
+        <p class="section-intro">
+            Forbidden Rites là một <strong>event league</strong> có nền kinh tế và bảng xếp hạng riêng, chạy đến khi ra bản 1.0. Cơ chế của nó là <strong>Ritual được làm lại</strong>, chia thành nửa campaign và nửa endgame. Vì là nội dung league nên nó chỉ được mô tả <strong>một lần</strong> ở đây, thay vì lặp lại ở mỗi act — bạn sẽ gặp nó ở <em>mọi</em> zone dù đi lộ trình nào.
+        </p>
+
+        <div class="preview-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;">
+
+            <!-- Campaign half -->
+            <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-left: 3px solid var(--plum); border-radius: 4px; padding: 0.95rem 1.05rem; box-shadow: var(--shadow-sm);">
+                <header style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.6rem; padding-bottom: 0.45rem; border-bottom: 1px solid var(--border-subtle);">
+                    <h3 style="font-family: var(--font-display); color: var(--plum); font-size: 0.78125rem; letter-spacing: 1.6px; text-transform: uppercase; margin: 0; font-weight: 600;">Trong Campaign</h3>
+                    <span style="font-size: 0.59375rem; color: var(--text-muted); letter-spacing: 0.8px; text-transform: uppercase; font-family: var(--font-mono);">Act I–IV + Interlude</span>
+                </header>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.75rem; color: var(--text-body); line-height: 1.55;">
+                    <li><strong>Mỗi khu vực có một Ritual.</strong> Mọi zone campaign đều có một encounter Ritual — không phải rare spawn. Khác với Ritual endgame, các Ritual này thưởng <strong>vật phẩm để leveling</strong>: crafting currency và một loạt trang bị, thay vì bảng chọn chỉ có Unique.</li>
+                    <li><strong>Cụm Boss Ritual.</strong> <strong>Hai lần mỗi Act</strong> và <strong>một lần mỗi Interlude</strong>, các cụm <strong>Ritual Effigy</strong> xuất hiện trên World Map.</li>
+                    <li><strong>Boss nối tiếp sang chặng sau.</strong> Hạ một boss Ritual thì boss đó sẽ <strong>được mang sang Ritual kế tiếp trong cụm</strong> ở khu vực sau — bạn đánh lại nó cùng với boss mới, tạo thành chuỗi các đợt boss ngày càng nguy hiểm.</li>
+                    <li><strong>Phần thưởng chuỗi.</strong> Hoàn thành cả chuỗi là bạn có thể dùng <strong>Tribute đã tích lũy để đổi lấy Unique Item</strong>.</li>
+                    <li><strong>Aoife</strong> giới thiệu từng encounter. Khi chơi nhóm, <strong>mọi người chơi trong khu vực phải nghe phần giới thiệu của cô ấy</strong> thì Ritual mới bắt đầu.</li>
+                </ul>
+            </article>
+
+            <!-- Endgame half -->
+            <article style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-left: 3px solid var(--plum); border-radius: 4px; padding: 0.95rem 1.05rem; box-shadow: var(--shadow-sm);">
+                <header style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.6rem; padding-bottom: 0.45rem; border-bottom: 1px solid var(--border-subtle);">
+                    <h3 style="font-family: var(--font-display); color: var(--plum); font-size: 0.78125rem; letter-spacing: 1.6px; text-transform: uppercase; margin: 0; font-weight: 600;">Trong Endgame</h3>
+                    <span style="font-size: 0.59375rem; color: var(--text-muted); letter-spacing: 0.8px; text-transform: uppercase; font-family: var(--font-mono);">Atlas · Map</span>
+                </header>
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.75rem; color: var(--text-body); line-height: 1.55;">
+                    <li><strong>Sacred Bloom.</strong> Một loại currency độc quyền của league, nay xuất hiện trong cửa sổ phần thưởng Ritual. Dùng nó để thêm <strong>Viridian Wildwood</strong> vào một cụm Map trên Atlas — chuột phải vào vật phẩm, rồi chuột trái vào một điểm trên Atlas.</li>
+                    <li><strong>The Wildwood.</strong> Một khu rừng mù sương riêng biệt ở <em>đầu</em> map, càng đi sâu tầm nhìn càng giảm. Hãy đi theo và thu thập <strong>dải Azmeri Wisp</strong>, sau đó bạn được đưa về map chính.</li>
+                    <li><strong>Wisp tăng sức mạnh cho map.</strong> Khi rời đi, quái trong map bị ảnh hưởng bởi các Wisp bạn đã gom — <strong>mạnh hơn và thưởng hậu hơn</strong>. Tổ hợp bạn thu thập quyết định loại phần thưởng.</li>
+                    <li><strong>Chồng Tablet.</strong> Dùng nhiều hơn một <strong>Ritual Tablet</strong> giờ sẽ thêm một Altar cho Map nếu có thể, và tăng số lượng Wisp bên trong Wildwood.</li>
+                    <li><strong>Royal Lenience</strong> — notable mới của Ritual trên Atlas. Tribute đã dâng cho King có thể dùng để <strong>Defer</strong> (hoãn) vật phẩm, với chi phí Offered Tribute <strong>cao hơn 500%</strong>.</li>
+                    <li><strong>Tribute theo nhóm.</strong> Thành viên trong nhóm giờ tự kiếm Ritual Tribute của riêng mình với bảng chọn phần thưởng riêng, hoặc có thể dâng nó cho King trong Mists.</li>
+                </ul>
+            </article>
+
+        </div>
+
+        <div class="note warn" style="margin-left: 0; margin-bottom: 1.75rem;">
+            <span class="label">Cảnh báo — không có trong patch notes</span> <strong>Các loại Wisp</strong> do cộng đồng suy ra, kế thừa từ league Affliction của PoE1, và <strong>không được nêu tên trong notes 0.5.5</strong>: <strong>Primal</strong> (xanh dương) nâng quái thường lên magic, <strong>Vivid</strong> (vàng) thêm affix cho rare, <strong>Wild</strong> (tím) tăng độ hiếm vật phẩm. Một số trang còn liệt kê loại thứ tư là <strong>Sacred Wisp</strong> nhưng không rõ hiệu ứng — chưa xác nhận. Lưu ý thêm: patch notes ghi là <strong>Sacred Bloom</strong>; một số bản preview trước khi ra mắt ghi "Sacred Blossom". Hãy coi tất cả những điều này là chưa kiểm chứng cho đến khi bạn tự thấy khi chơi.
+        </div>
+        <!-- ╚═══════════════════════════════════════════════════════════════════ ╝ -->
+
+        <!-- ╔══ SPEEDRUN TIPS · consolidated from all acts ════════════════════ ╗ -->
+        <div class="section-title">Mẹo Speedrun &amp; Hiệu quả<span class="sub">Cộng đồng đóng góp · gom từ mọi act vào một danh sách</span></div>
+        <p class="section-intro">
+            Trước đây những mẹo này nằm trong một hộp thu gọn ở mỗi trang act. Giờ chúng được gom về đây để bạn đọc một lần trước khi chạy, thay vì mở lại năm lần. Mẹo riêng cho từng act đều có nhãn.
+        </p>
+        <ul style="list-style: none; padding: 0; margin: 0 0 2.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 0.4rem 1.6rem; font-size: 0.71875rem; line-height: 1.55; color: var(--text-body);">
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Chơi gấp gáp.</strong> Giảm tối đa thời gian ở town và đừng bao giờ ngừng di chuyển trong zone — tiến độ kém hiệu quả vẫn hơn không tiến. Mục tiêu là campaign khoảng 5 giờ.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Đừng nghiên cứu layout.</strong> Level designer Sunna của GGG đã nói công khai rằng 0.5 làm lại quá nhiều nên học thuộc layout không còn đáng. Cứ đi tiếp kể cả khi chưa chắc hướng.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Tập trung đàn magic.</strong> Quái tên xanh cho khoảng <strong>3.5×</strong> XP so với quái trắng tương đương. Bỏ qua đàn trắng trừ khi bạn đang thiếu level.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Bám đường cong XP.</strong> Biên an toàn = thấp hơn khu vực 3 level, +1 cho mỗi 16 level nhân vật. Hãy đẩy XP khi bạn rơi ra ngoài mức này.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Đừng mule.</strong> Đi thẳng tới <strong>giá vũ khí ở Red Vale</strong> — chắc chắn rơi một vũ khí Martial bậc 2 (long quarterstaff, smithing hammer, tense crossbow).</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Dè sẻn regal và exalt.</strong> Một hai regal mỗi act, tốt nhất dùng lên base vũ khí chạm mốc modifier. Để dành exalt.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Đừng craft quá tay.</strong> Chuẩn bị tinh thần là hết cả một act mà không nâng được vũ khí. Mốc trang bị thật sự tiếp theo là <strong>map Tier 1</strong> — hãy để dành currency cho endgame.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Để dành artificer, rune và whetstone</strong> cho vũ khí của bạn ở cuối Act 4, khi đã biết mình mang gì vào Interlude và map.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Mua ít lần, mua hiệu quả hơn.</strong> Khi đã tìm được món nâng cấp sớm, bỏ qua vendor cho đến khi act kế tiếp bắt đầu.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Dùng regex trong ô tìm kiếm của vendor</strong> để highlight base bạn muốn. Rút việc mua sắm ở town từ vài phút xuống vài giây.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Dùng item filter cho leveling</strong> với highlight base mạnh tay theo build của bạn — ẩn đồ rác, chỉ hiện đồ nâng cấp.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Phím tắt menu.</strong> Giữ <kbd>Ctrl</kbd> trên passive tree để tự xác nhận điểm. Gán <strong>Quick Assign</strong> (không có phím mặc định) cho các node attribute. <kbd>Ctrl+Shift+Click trái/phải</kbd> trên hotbar để gán skill đổi vũ khí.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Sắp xếp stash trước trên Standard</strong> vài ngày trước khi league bắt đầu — tên tab, bố cục và highlight sẽ được mang sang nhân vật mới của bạn.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Chọn Ascendancy tốt cho leveling.</strong> Demon Form (Infernalist), Smith of Kitava, Sorcery Ward (Mercenary) cho sát thương và độ trâu cố định mà không cần món đồ đặc biệt. Bạn có thể respec cho endgame.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--steel);">◆</span><strong>Xác nhận Ascendancy của bạn là bản cuối</strong> trước khi nộp hoàn thành nhận <strong>+2 SP</strong> ở cuối Interlude.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">◆</span><strong>Act I — Cemetery.</strong> Đánh <strong>Draven trước</strong>, sau đó thoát ra rồi vào lại để làm mới zone trước khi đánh Asinia — drop của cô ấy scale theo level zone cao hơn.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">◆</span><strong>Act I —</strong> nhắm tới <strong>Lvl 14</strong> trước trận Geonor.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">◆</span><strong>Act II —</strong> chạy <strong>Mastodon Badlands trước Keth</strong>; Kabala drop một gem Lvl 7, đây là cú nhảy lớn cho mọi class.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">◆</span><strong>Act II — hoãn ascension đến Lvl 28.</strong> Bỏ qua trận Balbala cơ động cao ở Traitor's Passage; farm một <strong>Djinn Barya</strong> dự phòng từ Watchful Twins ở Deshar, rồi khi vào trial hãy tự chọn Barya Lvl 28 thay vì mặc định Lvl 22. Kháng tính tốt hơn khi hết trial — đây là meta speedrun.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">◆</span><strong>Act II — ưu tiên phòng trial:</strong> Ritual &gt; Chalice &gt; Hourglass &gt; Gauntlet.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">◆</span><strong>Act II —</strong> nhắm <strong>Lvl 29</strong> khi gặp Jamanra và <strong>Lvl 30</strong> khi vào Act III.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">◆</span><strong>Trước khi chạy map —</strong> Arbiter of Ash không còn là đỉnh núi; đỉnh giờ là <strong>Arbiter of Divinity</strong>. Xem <a href="poe2_endgame_guide.html" style="color: var(--gold);">hướng dẫn endgame</a>.</li>
+        </ul>
+        <!-- ╚═══════════════════════════════════════════════════════════════════ ╝ -->
+
+        <!-- ╔══ 0.5 STREAMLINING PREVIEW ══════════════════════════════════════ ╗ -->
+        <div class="section-title">Thay đổi Campaign vĩnh viễn<span class="sub">Là core từ 0.5 — những thay đổi này vẫn giữ khi league xoay vòng</span></div>
+        <p class="section-intro">
+            Các thay đổi campaign này <strong>đã được xác nhận trong patch notes 0.5</strong> — <strong>thay đổi cấu trúc</strong> của zone, cơ chế và nội dung cốt lõi. Các <strong>gợi ý điều hướng trực quan</strong> mà GGG thêm vào giờ nằm ngay trong các hướng dẫn act, được mô tả ở zone nơi chúng thật sự bắt đầu. Theo level designer Sunna của GGG, <strong>đừng học layout</strong> — nhiều thứ đã được làm lại.
+        </p>
+
+        <ul style="list-style: none; padding: 0; margin: 0 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 0.35rem 1.6rem; font-size: 0.71875rem; line-height: 1.55; color: var(--text-body);">
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--tan);">◆</span><strong>Act II — Dreadnought Vanguard bị loại bỏ.</strong> Jamanra được đánh trực tiếp trong The Dreadnought.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--tan);">◆</span><strong>Act III được sắp xếp lại.</strong> Thứ tự khu vực thay đổi; danh sách zone ở thanh bên Act 3 là nguồn chuẩn.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--tan);">◆</span><strong>Matlan Waterways.</strong> Cần gạt giờ là bàn đạp, chỉ cần bước lên; con kênh cuối được tháo cạn sẵn.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--tan);">◆</span><strong>Mật độ quái giảm</strong> ở nửa sau campaign, nhất là các Interlude.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--tan);">◆</span><strong>Farrow (Act 1–4).</strong> Verisium Anvil giờ mở khóa qua quest Runeseeker ở <a href="poe2_act4_guide.html" style="color: var(--gold);">Act 4</a>; bậc thang Runeforging theo từng act chỉ có trong Runes of Aldur.</li>
+            <li style="padding-left: 0.95rem; position: relative;"><span style="position: absolute; left: 0; color: var(--tan);">◆</span><strong>Fate of the Vaal (core).</strong> 6 Ancient Beacon ở Act 3 + 6 cái nữa ở Interlude mở cổng portal đến Vaal Ruins.</li>
+        </ul>
+
+        <!-- ╚═══════════════════════════════════════════════════════════════════ ╝ -->
+
+        <div class="features">
+            <div class="features-title">Tính năng của Codex</div>
+            <div class="features-list">
+                <span class="feature">Tiến độ lưu trong trình duyệt</span> <span class="feature">Đánh dấu đủ waypoint</span> <span class="feature">Đã xác nhận Patch 0.5</span> <span class="feature">Dùng được trên điện thoại</span> <span class="feature">Mọi class</span> <span class="feature">Level khuyến nghị của zone</span>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="site-footer-tag">Làm cho cộng đồng PoE2 · Bản tóm tắt do cộng đồng viết, có AI hỗ trợ</div>
+            <div class="site-footer-links">
+                <a href="https://github.com/tietvinhphu/poe2-leveling-vi/issues/new" class="site-footer-link">Góp ý</a> <a href="https://github.com/tietvinhphu/poe2-leveling-vi" class="site-footer-link">GitHub</a>
+            </div>
+            <div class="site-footer-disclaimer">Path of Exile 2 thuộc bản quyền © Grinding Gear Games. Nội dung fan làm, không chính thức.</div>
+        </footer>
+    </div>
+</body>
+</html>

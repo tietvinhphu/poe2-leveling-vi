@@ -1,0 +1,399 @@
+<!--
+  PoE2 Leveling Campaign & Endgame Guide — Act III — Utzaal to Ziggurat
+  Copyright (c) 2026 domistae
+  Licensed under the MIT License — see LICENSE for the full text.
+  Original source: https://github.com/domistae/poe2-leveling (English)
+  Vietnamese translation: https://github.com/tietvinhphu/poe2-leveling-vi
+  Live site (Vietnamese): https://tietvinhphu.github.io/poe2-leveling-vi/
+
+  You are free to use, modify, and redistribute this code, including for commercial purposes.
+  You MUST preserve this notice and provide attribution to the original source.
+  See README.md for full attribution requirements.
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Hướng dẫn Act 3 PoE 2 — Sandswept Marsh đến Ziggurat (Patch 0.5.5)</title>
+    <meta name="description" content="Hướng dẫn Act 3 Path of Exile 2 có theo dõi tiến độ. Lộ trình tối ưu, ascendancy thứ hai, mọi phần thưởng vĩnh viễn từ Sandswept Marsh đến Ziggurat. Patch 0.5.5 (Forbidden Rites).">
+    <meta name="author" content="domistae">
+    <meta name="theme-color" content="#181410">
+    <link rel="canonical" href="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_act3_guide.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hướng dẫn Leveling PoE 2">
+    <meta property="og:title" content="Hướng dẫn Act 3 PoE 2 — Sandswept Marsh đến Ziggurat (Patch 0.5.5)">
+    <meta property="og:description" content="Lộ trình Act 3 tối ưu có theo dõi tiến độ — Sandswept Marsh đến Ziggurat, ascendancy thứ hai. Patch 0.5.5.">
+    <meta property="og:url" content="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_act3_guide.html">
+    <meta property="og:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hướng dẫn Act 3 Path of Exile 2 — Sandswept Marsh đến Ziggurat (Patch 0.5.5)">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hướng dẫn Act 3 PoE 2 — Sandswept Marsh đến Ziggurat (Patch 0.5.5)">
+    <meta name="twitter:description" content="Lộ trình Act 3 tối ưu có theo dõi tiến độ — Sandswept Marsh đến Ziggurat, ascendancy thứ hai. Patch 0.5.5.">
+    <meta name="twitter:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="assets/site.js"></script>
+    <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/checklist.css">
+    <link rel="stylesheet" href="assets/skin.css">
+    <link rel="stylesheet" href="assets/act.css">
+</head>
+<body class="act-page" data-progress-key="poe2-act3-v05" data-reset-label="Act III">
+    <header class="site-head">
+        <div class="site-head-row">
+            <a href="index.html" class="brand">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2 L21 12 L12 22 L3 12 Z"/><path d="M12 7 L16 12 L12 17 L8 12 Z"/></svg>
+                <span>POE2 CODEX</span>
+            </a>
+            <nav class="site-nav" aria-label="Chính">
+                <a href="poe2_leveling_guide.html" class="site-nav-link current">Leveling</a>
+                <a href="poe2_endgame_guide.html" class="site-nav-link">Endgame</a>
+                <a href="poe2_league_guide.html" class="site-nav-link">League</a>
+                <a href="https://github.com/tietvinhphu/poe2-leveling-vi" class="site-nav-link">GitHub</a>
+                <button type="button" class="theme-toggle" aria-label="Đổi giao diện">
+                    <span class="icon" id="theme-icon">☾</span> <span id="theme-label">Đêm</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="act-strip" aria-label="Các Act">
+        <div class="act-strip-row">
+            <div class="act-tabs">
+            <a href="poe2_act1_guide.html" class="act-tab">Act I</a> <a href="poe2_act2_guide.html" class="act-tab">Act II</a> <a href="poe2_act3_guide.html" class="act-tab current" aria-current="page">Act III</a> <a href="poe2_act4_guide.html" class="act-tab">Act IV</a> <a href="poe2_interludes_guide.html" class="act-tab">Interlude</a> <span class="act-tab coming" title="Ra mắt cùng bản 1.0">Act V</span> <span class="act-tab coming" title="Ra mắt cùng bản 1.0">Act VI</span>
+            </div>
+            <div class="act-progress" title="Số bước đã xong trên trang này"><span class="act-progress-count" id="actProgressText">0 / 0</span><span class="act-progress-bar" aria-hidden="true"><span id="actProgressBar"></span></span><button type="button" class="act-reset" id="resetProgress" title="Xóa tiến độ trên trang này">Đặt lại</button></div>
+        </div>
+    </nav>
+
+    <div class="act-top">
+        <section class="act-head">
+            <div class="act-title"><span class="act-num">III</span><h1>Sandswept đến Ziggurat</h1><span class="act-meta">Lvl 30–42 · mọi class · 0.5.5</span></div>
+            <div class="act-filters" role="group" aria-label="Bộ lọc">
+                <button type="button" class="view-chip" data-view="hide-completed" aria-pressed="false" title="Ẩn các bước bạn đã tick xong">Ẩn mục đã xong</button>
+                <button type="button" class="view-chip" data-view="alt-leveling" aria-pressed="false" title="Chạy rút gọn: chỉ các bước cần thiết, mọi mục đánh dấu (Tùy chọn) đều bị ẩn">Chạy rút gọn</button>
+                <button type="button" class="view-chip league" data-view="league-notes" aria-pressed="true" title="Hiện hoặc ẩn ghi chú chỉ dành cho league">Ghi chú league</button>
+                <button type="button" class="view-chip cue-toggle" data-view="cue-notes" aria-pressed="true" title="Hiện hoặc ẩn các gợi ý trực quan"><svg class="eye-open" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg><span>Gợi ý</span></button>
+            </div>
+        </section>
+        <div class="act-rewards">
+            <span class="act-rewards-label">Phần thưởng Act</span> <span class="act-chip">+4 Weapon Set Skill Points</span> <span class="act-chip">+10% Fire Resistance</span> <span class="act-chip">+30 Spirit</span> <span class="act-chip">Reforging Bench (nhân vật đầu tiên)</span> <span class="act-chip">⚡ Ascendancy thứ hai</span> <span class="act-chip">⚠ Lựa chọn Servi vĩnh viễn</span> <span class="act-legend" role="group" aria-label="Bảng màu"> <span class="lg-boss">Boss</span><span class="lg-npc">NPC</span><span class="lg-loc">Địa điểm</span><span class="lg-gem">Gem</span><span class="lg-perm">Vĩnh viễn</span> </span>
+        </div>
+    </div>
+
+    <div class="container act-body">
+        <aside class="act-side">
+            <nav class="zone-rail" id="zoneRail" aria-label="Các zone"></nav>
+        </aside>
+
+        <main class="main">
+
+            <details class="info-box" style="border-left: 3px solid var(--steel); margin-bottom: 1.5rem;">
+                <summary style="color: var(--steel);">Ghi chú lộ trình</summary>
+                <ul class="tip-list">
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Lựa chọn của Servi là <strong>vĩnh viễn</strong> — đa số build chọn <strong>Stun Threshold</strong> (logout sẽ chữa bleed/freeze)</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Vendor ngoài field cho rare đảm bảo — <strong>Jungle (găng), Infested (giày), Chimeral Ravaged Camp (giáp)</strong></li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Servi's Son ở Jungle = <strong>belt rare đảm bảo</strong></li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Trial of Chaos: <strong>mẹo bỏ qua bằng soul core + né</strong> — nhân bản core vào mọi socket</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> Sacrificial Heart rơi từ <strong>Vaal Goliath</strong> (có canister trên vai) ở Utzaal &amp; Aggorat</li>
+                    <li><span class="icon" style="color: var(--steel);">◆</span> <strong>0.5:</strong> mật độ quái giảm ở nửa sau campaign — nhịp XP chặt hơn, hãy bám quy tắc biên an toàn (thấp hơn khu vực 3 level)</li>
+                </ul>
+            </details>
+
+
+            <div class="note change" style="margin-bottom:1.5rem;"><span class="label">Lộ trình 0.5</span>Phần nội dung đi theo thứ tự 0.5 đang chạy — <strong>Jungle Ruins &rarr; Venom Crypts &rarr; Infested Barrens &rarr; Chimeral Wetlands</strong> (khớp với thanh bên). Bạn tới <strong>Infested Barrens từ Jungle Ruins</strong>, còn <strong>Azak Bog</strong> được tới sau qua Matlan Waterways thay vì từ Infested Barrens.</div>
+
+            <!-- SANDSWEPT MARSH -->
+            <div class="zone-header" id="sandswept">Sandswept Marsh <span class="lvl">Lvl 30</span></div>
+            <div class="step" data-step="1"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">The Hooded One</span></div></div>
+            <div class="step" data-step="2"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Hạ <span class="boss">Rootdredge</span> <span class="reward-tag gem">Skill Gem Lv9</span></div></div>
+            <div class="step" data-step="3"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Basket</span> ở Orok Campsite <span class="reward-tag optional">Lesser Jeweller's Orb</span></div></div>
+            <div class="step" data-step="4"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Xác chết treo trên cây <span class="reward-tag optional">Magic Ring</span> <span class="reward-tag gem">Skill Gem Lv9</span></div></div>
+            <div class="step" data-step="5"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Ziggurat Encampment</span></div></div>
+
+            <!-- ZIGGURAT ENCAMPMENT -->
+            <div class="zone-header" id="ziggurat">Ziggurat Encampment <span class="wp town">TOWN</span></div>
+            <div class="step" data-step="6"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện <span class="npc">Alva</span>, <span class="npc">Oswald</span>, <span class="npc">The Hooded One</span></div></div>
+            <div class="step" data-step="7"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nâng cấp flask Lvl 30 từ vendor ở town (<span class="npc">Servi</span>) &mdash; tăng hồi phục + charge</div></div>
+            <div class="step" data-step="8"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Jungle Ruins</span> (lối ra phía trên)</div></div>
+
+            <!-- JUNGLE RUINS -->
+            <div class="zone-header" id="jungle">Jungle Ruins <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 30&ndash;31</span></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Trại thám hiểm.</strong> <strong>Trại thám hiểm</strong> trong rừng không còn chỉ là vendor. <strong>Hãy nói chuyện với các nhà thám hiểm</strong> &mdash; họ chỉ bạn tới khu vực kế tiếp, và điểm đến được <strong>hiện trên minimap</strong>. Cắt gần hết việc lang thang trong act.</div>
+            <div class="note league" data-league="runes-of-aldur">League đó đặt <span class="npc">Farrow</span> ở đầu mọi zone có Runestone — <strong>ba cái ở Act 3</strong> (Jungle Ruins, Venom Crypts, Azak Bog). Thu thập đủ ba sẽ mở <strong>Mystic Refuge</strong> ở Infested Barrens → dọn sạch → mở khóa <strong>Unique Verisium Runeforging</strong>. Với Unique <strong>level 55 trở xuống</strong>, vũ khí được tăng sát thương cơ bản + phòng thủ và giáp được thêm <strong>Runic Ward</strong> mà không đánh đổi gì; giá trị tốt nhất là trên unique của Kalguuran. <strong>Không có ở Forbidden Rites</strong> — xem <a href="poe2_act4_guide.html">Act 4</a> để biết cách mở khóa Verisium Anvil.</div>
+            <div class="note change"><span class="label">0.5 Fate of the Vaal</span>Một <strong>Vaal Beacon</strong> xuất hiện trong rừng &mdash; encounter Fate-of-the-Vaal đầu tiên của bạn (vòng đá đỏ tăng sức mạnh cho đàn quái xung quanh; đàn quái bị tha hóa dày đặc đó chính là "lời cảnh báo"). Dọn sạch đàn quái để thắp một tinh thể — đây là beacon <strong>1 trên 6</strong>. <strong>Sáu beacon</strong> trong Act 3 mở một portal tới <strong>Vaal Ruins</strong>. Xem <a href="poe2_endgame_guide.html#fate-of-the-vaal">hướng dẫn endgame &rarr;</a></div>
+            <div class="step" data-step="10"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Mighty Silverfist</span> <span class="reward-tag">+2 Skill Points</span></div></div>
+            <div class="note warning">Né đòn slam sang NGANG (không phải lùi lại) &mdash; sóng lan theo hướng tấn công</div>
+            <div class="step" data-step="11"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Jungle Grave (xác chết bị tàn phá) &rarr; <span class="npc">Servi</span> cho <span class="reward-tag">Rare Belt (tự chọn)</span></div></div>
+            <div class="step" data-step="12"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Troubled Camp (<span class="npc">Gwendolyn Albright</span>) <span class="reward-tag">Rare Gloves đảm bảo</span></div></div>
+            <div class="step" data-step="14"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm WP gần <span class="loc">Venom Crypts</span> &rarr; Vào <span class="loc">The Venom Crypts</span></div></div>
+
+            <!-- VENOM CRYPTS -->
+            <div class="zone-header" id="venom">The Venom Crypts &#9888; <span class="lvl">Area Lvl 35</span></div>
+            <div class="note change"><span class="label">0.5 Fate of the Vaal</span>Một <strong>Vaal Beacon</strong> khác xuất hiện ở đây (<strong>2 trên 6</strong>) &mdash; dọn sạch đàn quái của nó để thắp thêm một tinh thể trong sáu cái cần cho Vaal Ruins.</div>
+            <div class="step" data-step="15"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Sự kiện quan tài đá <span class="reward-tag gem">Lv3 Support đảm bảo</span></div></div>
+            <div class="step" data-step="16"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm xác chết &rarr; nhặt <span class="item">Orok Poison</span> &rarr; đi tới vùng an toàn <span class="loc">A Reprieve</span></div></div>
+            <div class="step" data-step="18"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- ZIGGURAT -->
+            <div class="zone-header">Ziggurat Encampment</div>
+            <div class="step" data-step="19"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Giao <span class="item">Orok Poison</span> cho <span class="npc">Servi</span> <span class="reward-tag perm">LỰA CHỌN VĨNH VIỄN</span> <span class="reward-tag craft">Artificer's Orb</span></div></div>
+            <div class="note warning">VĨNH VIỄN &mdash; không thể đổi sau này!<br>&bull; <strong>+25% Stun Threshold</strong> (phổ biến &mdash; logout chữa bleed/freeze)<br>&bull; +30% Elemental Ailment Threshold (tốt nếu cây passive thiếu)<br>&bull; +25% Mana Regeneration (hiếm khi chọn)</div>
+            <div class="step" data-step="20"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới <span class="loc">Infested Barrens</span> (tạm thời đi qua Jungle Ruins)</div></div>
+
+            <!-- INFESTED BARRENS -->
+            <div class="zone-header" id="infested">Infested Barrens <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 31&ndash;32</span></div>
+            <div class="note change"><span class="label">Lộ trình 0.5</span>Bạn tới Infested Barrens <strong>từ Jungle Ruins</strong>.</div>
+            <div class="note change"><span class="label">0.5 Fate of the Vaal</span>Một <strong>Vaal Beacon</strong> xuất hiện ở đây (<strong>3 trên 6</strong>) — dọn sạch đàn quái của nó trong sáu cái cần cho Vaal Ruins.</div>
+            <div class="step" data-step="21"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm/nói chuyện <span class="npc">Alva</span>, lấy WP gần cô ấy</div></div>
+            <div class="step" data-step="22"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Troubled Camp (<span class="npc">Sebastian Carroway</span>) <span class="reward-tag">Rare Boots đảm bảo</span></div></div>
+            <div class="step" data-step="23"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Chimeral Wetlands</span></div></div>
+            <!-- CHIMERAL WETLANDS -->
+            <div class="zone-header" id="chimeral">Chimeral Wetlands <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 32–33</span></div>
+            <div class="note change"><span class="label">0.5 Fate of the Vaal</span>Một <strong>Vaal Beacon</strong> xuất hiện ở đây (<strong>4 trên 6</strong>) — dọn sạch đàn quái của nó trong sáu cái cần cho Vaal Ruins.</div>
+            <div class="step" data-step="26"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Ravaged Camp</span> → <span class="item">Lost Temple Logbook</span> (mở ra Temple of Chaos) + rương vàng <span class="reward-tag">Rare Armour đảm bảo</span></div></div>
+            <div class="step" data-step="27"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Điểm tham quan Toxic Bloom (<span class="boss">Noxious Behemoth</span>) <span class="reward-tag optional">Magic Amulet</span></div></div>
+            <div class="step" data-step="28"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Cơ chế league <span class="reward-tag gem">Skill Gem Lv9</span></div></div>
+            <div class="step" data-step="29"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Temple of Chaos</span> → lấy WP → quay lại <span class="reward-tag asc">Ascendancy thứ 2</span></div></div>
+            <div class="step" data-step="30"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Xyclucian, the Chimera</span> → nhặt <span class="item">Inscribed Ultimatum</span></div></div>
+            <div class="step" data-step="31"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Jiquani's Machinarium</span> phía sau boss</div></div>
+
+            <!-- TRIAL OF CHAOS (optional ascend slot) -->
+            <div class="phase-header">Ascendancy thứ 2 (khi sẵn sàng)</div>
+
+            <div class="zone-header" id="trial2">Trial of Chaos <span class="lvl">Lvl 33+</span></div>
+            <div class="step" data-step="32"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Dùng <span class="item">Inscribed Ultimatum</span> ở lối vào trial</div></div>
+            <div class="step" data-step="33"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Chọn mod có lợi (tránh lightning rune nếu thiếu Lightning Res)</div></div>
+            <div class="note tip">Mẹo Soul Core: lăn né giữa lúc slam &amp; xoay của animation đặt core — nhân bản core vào mọi socket</div>
+            <div class="step" data-step="34"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hoàn thành trial → <span class="reward-tag asc">Ascendancy thứ 2</span></div></div>
+
+            <!-- JIQUANI'S MACHINARIUM -->
+            <div class="zone-header" id="machinarium">Jiquani's Machinarium <span class="lvl">Lvl 33</span></div>
+            <div class="note tip">Bố cục = chữ U vuông, máy phát điện ở hai đầu đối diện</div>
+            <div class="step" data-step="35"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Triệu hồi/nói chuyện <span class="npc">Alva</span></div></div>
+            <div class="step" data-step="36"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nhặt <span class="item">Small Soul Core</span> → dùng lên Stone Altar cạnh Alva</div></div>
+            <div class="step" data-step="37"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nhặt các <span class="item">Small Soul Core</span> còn lại (<strong>tổng 4</strong>) — 1 cái mở Jiquani's Sanctum, 2 cái cho cửa Blackjaw tùy chọn hoặc phòng loot bí mật</div></div>
+            <div class="step" data-step="38"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Mở cửa Blackjaw → hạ <span class="boss">Blackjaw, the Remnant</span> → dùng <span class="item">Flame Core</span> <span class="reward-tag">+10% Fire Res</span></div></div>
+            <div class="step" data-step="39"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Mở cửa khác → vào <span class="loc">Jiquani's Sanctum</span></div></div>
+
+            <!-- JIQUANI'S SANCTUM -->
+            <div class="zone-header" id="sanctum">Jiquani's Sanctum <span class="lvl">Lvl 33–34</span></div>
+            <div class="step" data-step="40"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Triệu hồi/nói chuyện <span class="npc">Alva</span></div></div>
+            <div class="step" data-step="41"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nhặt 2 <span class="item">Medium Soul Core</span>, đặt vào Generator</div></div>
+            <div class="step" data-step="42"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Quay lại điểm đầu → bấm <span class="item">Large Soul Core</span> → hạ <span class="boss">Zicoatl, Warden of the Core</span> → nhặt core</div></div>
+            <div class="note change"><span class="label">0.5 Fate of the Vaal</span>Một <strong>Vaal Beacon</strong> xuất hiện trong Sanctum (<strong>5 trên 6</strong>) — dọn sạch đàn quái của nó trong sáu cái cần cho Vaal Ruins.</div>
+            <div class="note tip"><strong>Paquate's Mechanism</strong> (altar tha hóa) nằm trong Sanctum — tha hóa vật phẩm kiểu Vaal Orb trong lúc bạn dọn zone.</div>
+            <div class="step" data-step="43"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về <span class="loc">Jungle Ruins</span></div></div>
+
+            <!-- JUNGLE RUINS RETURN -->
+            <div class="zone-header">Jungle Ruins (quay lại)</div>
+            <div class="note change"><span class="label">Lộ trình 0.5</span>Sau Sanctum, bạn quay về <strong>Jungle Ruins</strong> (không phải Infested Barrens) và dùng Large Soul Core lên Stone Altar ở đó để làm lộ lối vào Matlan Waterways.</div>
+            <div class="step" data-step="44"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Dùng <span class="item">Large Soul Core</span> lên <span class="item">Stone Altar</span> → làm lộ lối vào <span class="loc">Matlan Waterways</span></div></div>
+            <div class="step" data-step="45"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Matlan Waterways</span></div></div>
+
+            <!-- MATLAN WATERWAYS -->
+            <div class="zone-header" id="matlan">The Matlan Waterways <span class="lvl">Lvl 35</span></div>
+            <div class="step" data-step="46"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Narag's Hut</span> → hạ <span class="boss">Narag of the Vile Word</span> <span class="reward-tag">Rare Weapon</span> <span class="reward-tag craft">Blacksmith's Whetstone</span></div></div>
+            <div class="step" data-step="47"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Bước lên các <span class="item">bàn đạp</span> (6–8 cái mỗi layout) — tự kích hoạt khi chạm</div></div>
+            <div class="step" data-step="48"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới cuối zone — đoạn cuối giờ đã <strong>được tháo cạn sẵn</strong></div></div>
+            <div class="note change"><span class="label">0.5 QoL</span>Cần gạt trở thành <strong>bàn đạp</strong> chỉ cần bước lên, và đoạn kênh cuối được <strong>tháo cạn sẵn</strong>. Không còn cần mẹo bỏ qua bằng portal nữa — cứ đi thẳng qua.</div>
+            <div class="note change"><span class="label">0.5 Fate of the Vaal</span><strong>Vaal Beacon thứ 6 và cuối cùng</strong> xuất hiện ở đây — kích hoạt nó là đủ bộ và <strong>mở portal tới Vaal Ruins</strong> (vào nhanh; lối vào có thể biến mất và làm kẹt quest). Cốt truyện tiếp tục ở các Interlude (thêm 6 beacon) và trở thành một cốt truyện endgame đầy đủ. Xem <a href="poe2_endgame_guide.html#fate-of-the-vaal">mục Fate of the Vaal trong hướng dẫn endgame &rarr;</a></div>
+            <div class="step" data-step="88"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Ravaged Corpse</span> ở lối vào Azak Bog → triệu hồi <span class="npc">Servi</span> <span class="reward-tag">Unidentified Rare Belt</span></div></div>
+            <div class="note tip">Servi chỉ xuất hiện ở lối vào này — cô ấy <strong>không</strong> ở bên trong Azak Bog.</div>
+            <div class="step" data-step="49"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi lối vào phụ <span class="loc">Azak Bog</span> (rẽ ra từ Waterways)</div></div>
+
+            <!-- AZAK BOG -->
+            <div class="zone-header" id="azakbog">Azak Bog <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 33–34</span></div>
+            <div class="note change"><span class="label">Lộ trình 0.5</span>Azak Bog giờ là một <strong>zone phụ rẽ ra từ Matlan Waterways</strong> (không còn đi tới từ Drowned City).</div>
+            <div class="step" data-step="56"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Ritual Flameskin <span class="reward-tag optional">Ignagduk's Harvest (Fire Res + Rarity)</span></div></div>
+            <div class="note tip">Đấu trường boss luôn ở góc trên bên phải; hướng xoay phụ thuộc vào phía lối vào. Reset farm đàn magic quanh fire shrine để lấy XP</div>
+            <div class="step" data-step="57"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Ignagduk, the Bog Witch</span> → dùng <span class="item">Gemrot Skull</span> <span class="reward-tag">+30 Spirit</span> <span class="reward-tag gem">Uncut Spirit Gem Lv10</span></div></div>
+            <div class="step" data-step="58"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Trả <span class="item">Ignagduk's Ghastly Spear</span> cho <span class="npc">Servi</span> ở town <span class="reward-tag">Charm (chọn 1 trong 3)</span></div></div>
+            <div class="step" data-step="59"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- ZIGGURAT -->
+            <div class="zone-header">Ziggurat Encampment</div>
+            <div class="step" data-step="50"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Xuống tầng dưới → nói chuyện <span class="npc">Alva</span></div></div>
+            <div class="step" data-step="51"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Drowned City</span> (lối ra phía dưới)</div></div>
+
+            <!-- DROWNED CITY -->
+            <div class="zone-header" id="drowned">The Drowned City <span class="lvl">Lvl 35–36</span></div>
+            <div class="note tip">Bố cục cố định và giống Utzaal — nút thắt sau cây cầu ở đây chính là chỗ Viper sau này phục kích ở Utzaal.</div>
+            <div class="step" data-step="52"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm <span class="loc">Apex of Filth</span> → lấy WP → quay lại</div></div>
+            <div class="step" data-step="53"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm <span class="loc">The Molten Vault</span> → lấy WP → quay lại</div></div>
+            <div class="step" data-step="90"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Drowned Quarters</span> — phòng/cửa ẩn có quái rare, gold &amp; rương <span class="reward-tag">Rune rơi ra</span></div></div>
+            <div class="note warning">Một đàn Crawler phục kích ở nút thắt ngay sau cây cầu có checkpoint — có loot. Quả cầu chết đuối (màu xanh ngọc) che tầm nhìn và giết bạn nếu nấn ná; cứ di chuyển liên tục.</div>
+            <div class="step" data-step="54"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP tới <span class="loc">The Molten Vault</span> (nhân vật đầu) hoặc về town</div></div>
+
+            <!-- MOLTEN VAULT -->
+            <div class="zone-header" id="molten">The Molten Vault <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 36</span></div>
+            <div class="step" data-step="60"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="action">(nhân vật đầu tiên)</span> Hạ <span class="boss">Mektul, the Forgemaster</span> <span class="reward-tag craft">Reforging Bench</span> <span class="reward-tag gem">Uncut Skill Gem Lv10</span> <span class="reward-tag craft">Artificer's Orb</span></div></div>
+            <div class="note tip">Trả Hammer of Kamasa cho Oswald ở town để mở khóa bench. Bỏ qua ở nhân vật phụ</div>
+            <div class="note warning">Mektul có đồng hồ lũ dung nham ~4 phút — hãy over-level và mang Fire Res.</div>
+            <div class="note tip"><span class="skip">(Tùy chọn)</span> Frost Core → Stone Altar dọn các điểm tắc Molten Flow → Gold Chest.</div>
+            <div class="step" data-step="61"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- ZIGGURAT -->
+            <div class="zone-header">Ziggurat Encampment</div>
+            <div class="step" data-step="62"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Oswald</span></div></div>
+            <div class="step" data-step="63"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP tới <span class="loc">Apex of Filth</span></div></div>
+
+            <!-- APEX OF FILTH -->
+            <div class="zone-header" id="apex">Apex of Filth <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 36–37</span></div>
+            <div class="step" data-step="64"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Tìm 3 cây nấm → dùng Cauldron (<span class="npc">Cauldron Keeper</span>) <span class="reward-tag optional">Quality Life/Mana Flask</span></div></div>
+            <div class="note tip">Đi qua nút thắt có checkpoint, rồi kiểm tra các góc phía sau. <span class="npc">Cauldron Keeper</span> cũng là vendor bí mật — đồ caster + trang sức.</div>
+            <div class="step" data-step="65"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Queen of Filth</span> → nhặt <span class="item">Temple Door Idol</span></div></div>
+            <div class="note warning">Đứng gần cô ta — di chuyển ra xa sẽ kích hoạt đòn lăn slam tối thượng</div>
+            <div class="step" data-step="66"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- ZIGGURAT -->
+            <div class="zone-header">Ziggurat Encampment</div>
+            <div class="step" data-step="67"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Xuống tầng dưới → nói chuyện <span class="npc">Alva</span></div></div>
+            <div class="step" data-step="68"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Cửa phía sau cô ta → vào <span class="loc">Temple of Kopec</span></div></div>
+
+            <!-- TEMPLE OF KOPEC -->
+            <div class="zone-header" id="kopec">Temple of Kopec <span class="lvl">Lvl 37</span></div>
+            <div class="note tip">Mỗi tầng là một hình tam giác — góc xa nhất có 50% khả năng là đúng. Luôn kiểm tra nó trước</div>
+            <div class="step" data-step="69"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Ketzuli, High Priest of the Sun</span> (trên lầu)</div></div>
+            <div class="note warning">Trong nhà, ánh nắng cộng dồn debuff cháy — đứng trong bóng râm giữa các đàn quái.</div>
+            <div class="step" data-step="70"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện <span class="npc">Alva</span>, chờ đoạn lore</div></div>
+
+            <!-- ZIGGURAT -->
+            <div class="zone-header">Ziggurat Encampment</div>
+            <div class="step" data-step="71"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi vào Gateway</div></div>
+            <div class="step" data-step="72"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Xuống tầng dưới → vào <span class="loc">Utzaal</span></div></div>
+
+            <!-- UTZAAL -->
+            <div class="zone-header" id="utzaal">Utzaal <span class="lvl">Lvl 38–39</span></div>
+            <div class="note tip">Bố cục giống Drowned City. Đi theo con đường lát đá — nó dẫn tới Viper</div>
+            <div class="step" data-step="73"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Farm <span class="item">Sacrificial Heart</span> từ <strong>Vaal Goliath</strong> (canister trên vai)</div></div>
+            <div class="note tip">Cũng có thể rơi ở Aggorat — chỉ một loại quái cụ thể mới rơi</div>
+            <div class="step" data-step="76"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Cửa phụ chứa idol (bán cho Oswald lấy gold)</div></div>
+            <div class="note tip"><span class="skip">(Tùy chọn)</span> Một <strong>Chaos Statue</strong> ở đây cho Inscribed Ultimatum dùng được ở Temple of Chaos.</div>
+            <div class="step" data-step="77"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Viper Napuatzi</span></div></div>
+            <div class="note warning">Cơ động và né cao — nhử chu kỳ tấn công đầu từ một vị trí cố định để đoán được cô ta</div>
+            <div class="step" data-step="78"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Aggorat</span></div></div>
+
+            <!-- AGGORAT -->
+            <div class="zone-header" id="aggorat">Aggorat <span class="lvl">Lvl 39–40</span></div>
+            <div class="note tip">Tiếng hô của town crier cho bạn biết đúng hướng. Rìa kim tự tháp = boss</div>
+            <div class="step" data-step="79"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm <span class="item">Sacrificial Altar</span> (góc trên bên phải bản đồ)</div></div>
+            <div class="step" data-step="80"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đặt <span class="item">Sacrificial Heart</span> → đâm bằng Dagger <span class="reward-tag">+2 Skill Points</span></div></div>
+            <div class="step" data-step="81"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Cơ chế league (Crag Tooth) <span class="reward-tag craft">Vaal Orb</span></div></div>
+            <div class="step" data-step="82"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Black Chambers</span> (góc trên bên trái bản đồ)</div></div>
+
+            <!-- BLACK CHAMBERS -->
+            <div class="zone-header" id="chambers">The Black Chambers <span class="lvl">Lvl 40–42</span></div>
+            <div class="step" data-step="83"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Doryani, Royal Thaumaturge</span> (Act Boss)</div></div>
+            <div class="note warning">Ba phase: caster → cơ chế <strong>Doryani's Triumph</strong> dưới 50% (cuồng nộ → buff củng cố trước khi giao chiến) → phase bay trên không.</div>
+            <div class="step" data-step="84"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Chờ loot rơi (~30 giây)</div></div>
+            <div class="step" data-step="85"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- END -->
+            <div class="zone-header">Ziggurat Encampment (Cuối Act)</div>
+            <div class="step" data-step="86"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Doryani</span></div></div>
+            <div class="step" data-step="87"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện <span class="npc">Doryani</span> lần nữa → <span class="npc">Alva</span> → <span class="npc">Hooded One</span> → <span class="npc">Alva</span></div></div>
+            <div class="note success">Hoàn thành Act III — sang Act IV (Kingsmarch)</div>
+
+            <div class="footer-nav">
+                <a href="poe2_act2_guide.html">← Act II</a> <a href="index.html">Mục lục</a> <a href="poe2_act4_guide.html">Act IV →</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer act-footer">
+        <div class="act-footer-row">
+            <span>Không chính thức, do fan làm. Path of Exile 2 thuộc bản quyền © Grinding Gear Games.</span> <span class="act-footer-links"><a href="https://github.com/tietvinhphu/poe2-leveling-vi/issues/new">Góp ý</a><a href="https://github.com/tietvinhphu/poe2-leveling-vi">GitHub</a></span>
+        </div>
+    </footer>
+    <script src="assets/league.js" defer></script>
+    <script src="assets/progress.js" defer></script>
+</body>
+</html>

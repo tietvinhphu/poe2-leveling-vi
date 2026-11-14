@@ -1,0 +1,370 @@
+<!--
+  PoE2 Leveling Campaign & Endgame Guide — Act II — Vastiri Desert to Dreadnought
+  Copyright (c) 2026 domistae
+  Licensed under the MIT License — see LICENSE for the full text.
+  Original source: https://github.com/domistae/poe2-leveling (English)
+  Vietnamese translation: https://github.com/tietvinhphu/poe2-leveling-vi
+  Live site (Vietnamese): https://tietvinhphu.github.io/poe2-leveling-vi/
+
+  You are free to use, modify, and redistribute this code, including for commercial purposes.
+  You MUST preserve this notice and provide attribution to the original source.
+  See README.md for full attribution requirements.
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Hướng dẫn Act 2 PoE 2 — Vastiri đến Dreadnought (Patch 0.5.5)</title>
+    <meta name="description" content="Hướng dẫn Act 2 Path of Exile 2 có theo dõi tiến độ. Lộ trình tối ưu, hướng dẫn ascendancy, mọi phần thưởng vĩnh viễn từ Vastiri đến Dreadnought. Patch 0.5.5 (Forbidden Rites).">
+    <meta name="author" content="domistae">
+    <meta name="theme-color" content="#181410">
+    <link rel="canonical" href="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_act2_guide.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hướng dẫn Leveling PoE 2">
+    <meta property="og:title" content="Hướng dẫn Act 2 PoE 2 — Vastiri đến Dreadnought (Patch 0.5.5)">
+    <meta property="og:description" content="Lộ trình Act 2 tối ưu có theo dõi tiến độ — Vastiri đến Dreadnought, ascendancy, mọi skill point. Patch 0.5.5.">
+    <meta property="og:url" content="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_act2_guide.html">
+    <meta property="og:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hướng dẫn Act 2 Path of Exile 2 — Vastiri Desert đến Dreadnought (Patch 0.5.5)">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hướng dẫn Act 2 PoE 2 — Vastiri đến Dreadnought (Patch 0.5.5)">
+    <meta name="twitter:description" content="Lộ trình Act 2 tối ưu có theo dõi tiến độ — Vastiri đến Dreadnought, ascendancy, mọi skill point. Patch 0.5.5.">
+    <meta name="twitter:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="assets/site.js"></script>
+    <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/checklist.css">
+    <link rel="stylesheet" href="assets/skin.css">
+    <link rel="stylesheet" href="assets/act.css">
+</head>
+<body class="act-page" data-progress-key="poe2-act2-v05" data-reset-label="Act II">
+    <header class="site-head">
+        <div class="site-head-row">
+            <a href="index.html" class="brand">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2 L21 12 L12 22 L3 12 Z"/><path d="M12 7 L16 12 L12 17 L8 12 Z"/></svg>
+                <span>POE2 CODEX</span>
+            </a>
+            <nav class="site-nav" aria-label="Chính">
+                <a href="poe2_leveling_guide.html" class="site-nav-link current">Leveling</a>
+                <a href="poe2_endgame_guide.html" class="site-nav-link">Endgame</a>
+                <a href="poe2_league_guide.html" class="site-nav-link">League</a>
+                <a href="https://github.com/tietvinhphu/poe2-leveling-vi" class="site-nav-link">GitHub</a>
+                <button type="button" class="theme-toggle" aria-label="Đổi giao diện">
+                    <span class="icon" id="theme-icon">☾</span> <span id="theme-label">Đêm</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="act-strip" aria-label="Các Act">
+        <div class="act-strip-row">
+            <div class="act-tabs">
+            <a href="poe2_act1_guide.html" class="act-tab">Act I</a> <a href="poe2_act2_guide.html" class="act-tab current" aria-current="page">Act II</a> <a href="poe2_act3_guide.html" class="act-tab">Act III</a> <a href="poe2_act4_guide.html" class="act-tab">Act IV</a> <a href="poe2_interludes_guide.html" class="act-tab">Interlude</a> <span class="act-tab coming" title="Ra mắt cùng bản 1.0">Act V</span> <span class="act-tab coming" title="Ra mắt cùng bản 1.0">Act VI</span>
+            </div>
+            <div class="act-progress" title="Số bước đã xong trên trang này"><span class="act-progress-count" id="actProgressText">0 / 0</span><span class="act-progress-bar" aria-hidden="true"><span id="actProgressBar"></span></span><button type="button" class="act-reset" id="resetProgress" title="Xóa tiến độ trên trang này">Đặt lại</button></div>
+        </div>
+    </nav>
+
+    <div class="act-top">
+        <section class="act-head">
+            <div class="act-title"><span class="act-num">II</span><h1>Vastiri đến Dreadnought</h1><span class="act-meta">Lvl 14–29 · mọi class · 0.5.5</span></div>
+            <div class="act-filters" role="group" aria-label="Bộ lọc">
+                <button type="button" class="view-chip" data-view="hide-completed" aria-pressed="false" title="Ẩn các bước bạn đã tick xong">Ẩn mục đã xong</button>
+                <button type="button" class="view-chip" data-view="alt-leveling" aria-pressed="false" title="Chạy rút gọn: chỉ các bước cần thiết, mọi mục đánh dấu (Tùy chọn) đều bị ẩn">Chạy rút gọn</button>
+                <button type="button" class="view-chip league" data-view="league-notes" aria-pressed="true" title="Hiện hoặc ẩn ghi chú chỉ dành cho league">Ghi chú league</button>
+                <button type="button" class="view-chip cue-toggle" data-view="cue-notes" aria-pressed="true" title="Hiện hoặc ẩn các gợi ý trực quan"><svg class="eye-open" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg><span>Gợi ý</span></button>
+            </div>
+        </section>
+        <div class="act-rewards">
+            <span class="act-rewards-label">Phần thưởng Act</span> <span class="act-chip">+4 Weapon Set Skill Points</span> <span class="act-chip">+10% Lightning Resistance</span> <span class="act-chip">+1 Charm Slot + buff Charm (tự chọn)</span> <span class="act-chip">⚡ Ascendancy đầu tiên</span> <span class="act-legend" role="group" aria-label="Bảng màu"> <span class="lg-boss">Boss</span><span class="lg-npc">NPC</span><span class="lg-loc">Địa điểm</span><span class="lg-gem">Gem</span><span class="lg-perm">Vĩnh viễn</span> </span>
+        </div>
+    </div>
+
+    <div class="container act-body">
+        <aside class="act-side">
+            <nav class="zone-rail" id="zoneRail" aria-label="Các zone"></nav>
+        </aside>
+
+        <main class="main">
+
+
+            <!-- VASTIRI OUTSKIRTS -->
+            <div class="zone-header" id="vastiri">Vastiri Outskirts <span class="lvl">Lvl 14–15</span></div>
+            <div class="step" data-step="1"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">The Hooded One</span></div></div>
+            <div class="step" data-step="2"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Rathbreaker</span></div></div>
+            <div class="step" data-step="3"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về đầu zone</div></div>
+            <div class="step" data-step="4"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Zarka</span> <span class="reward-tag gem">Uncut Skill Gem Lv5</span></div></div>
+            <div class="step" data-step="5"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Ardura Caravan</span></div></div>
+
+            <!-- ARDURA CARAVAN -->
+            <div class="zone-header" id="caravan">The Ardura Caravan <span class="wp town">TOWN</span></div>
+            <div class="step" data-step="6"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Hooded One</span> + <span class="npc">Sekhema Asala</span> (×2)</div></div>
+            <div class="note league" data-league="runes-of-aldur">League đó thêm một <strong>Ezomyte Remnant</strong> ở mọi zone (khắc rune → đánh các đợt quái → nhận thưởng), cùng các <strong>Runestone</strong> ở Bone Pits, Keth và Deshar để triệu hồi Farrow. Chuỗi Deshar của nó (Runestone → caravan tới <strong>Skull of the Titan</strong> → cửa hang → <strong>Runic Vault</strong>) mở khóa Runic Inscriptions. <strong>Không điều nào trong số này xuất hiện ở Forbidden Rites</strong> — ở đó Verisium Anvil được mở khóa ở <a href="poe2_act4_guide.html">Act 4</a>.</div>
+            <div class="step" data-step="7"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Dùng <span class="item">Desert Map</span> → đi tới <span class="loc">Halani Gates</span></div></div>
+            <div class="step" data-step="8"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào Halani Gates → nói chuyện với <span class="npc">Sekhema Asala</span></div></div>
+            <div class="step" data-step="9"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Quay lại Caravan → nói chuyện với <span class="npc">Sekhema Asala</span></div></div>
+            <div class="step" data-step="10"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới <span class="loc">Mawdun Quarry</span></div></div>
+
+            <!-- MAWDUN QUARRY -->
+            <div class="zone-header" id="mawdun">Mawdun Quarry <span class="lvl">Lvl 15</span></div>
+            <div class="step" data-step="11"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Faridun War Cache</span> gần checkpoint <span class="reward-tag optional">Artificer's Orb</span></div></div>
+            <div class="step" data-step="12"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Mawdun Mine</span> (đi theo các checkpoint)</div></div>
+
+            <!-- MAWDUN MINE -->
+            <div class="zone-header">Mawdun Mine <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="lvl">Lvl 16</span></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Đường ray.</strong> Đi theo <strong>đường ray</strong> xuyên qua hầm mỏ. Ở mỗi ngã giao, hãy rẽ vào <strong>nhánh ray nối liền với nhau</strong> — bám theo đường ray liền mạch sẽ giữ bạn trên đường chính và tránh các ngõ cụt.</div>
+            <div class="step" data-step="13"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Rudja</span> <span class="reward-tag gem">Uncut Skill Gem Lv6</span></div></div>
+            <div class="step" data-step="14"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Risu</span> trong lồng</div></div>
+            <div class="step" data-step="15"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- CARAVAN -->
+            <div class="zone-header">The Ardura Caravan</div>
+            <div class="step" data-step="16"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Risu</span> + <span class="npc">Sekhema Asala</span></div></div>
+            <div class="step" data-step="17"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới <span class="loc">Traitor's Passage</span></div></div>
+
+            <!-- TRAITOR'S PASSAGE -->
+            <div class="zone-header" id="traitor">Traitor's Passage <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="lvl">Lvl 17</span></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Giấy da Maraketh.</strong> Lối đi này giờ luôn sinh ra với một <strong>ngã rẽ cố định</strong>. Nhánh treo <strong>giấy da</strong> — loại giấy người Maraketh dùng để trói djinn — dẫn tới <span class="npc">Balbala</span>. Nhánh còn lại là lối ra. Bạn không thể nhầm ngã rẽ này.</div>
+            <div class="step" data-step="18"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tương tác với cửa <span class="item">Ancient Seal</span> + Runic Seal</div></div>
+            <div class="step" data-step="19"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Hạ <span class="boss">Balbala, the Traitor</span> <span class="reward-tag asc">Djinn Barya</span> <span class="reward-tag gem">Uncut Skill Gem Lv6</span></div></div>
+            <div class="note tip">Đa số build bỏ qua — lấy Barya dự phòng từ kền kền Deshar (trận ít cơ động hơn, XP tốt hơn ở Lvl 28)</div>
+            <div class="step" data-step="20"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Bell Chest</span> ở ngõ cụt <span class="reward-tag optional">Loot ngẫu nhiên</span></div></div>
+            <div class="step" data-step="21"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Halani Gates</span> (cầu thang đi lên)</div></div>
+
+            <!-- HALANI GATES -->
+            <div class="zone-header" id="halani">The Halani Gates <span class="lvl">Lvl 18</span></div>
+            <div class="step" data-step="22"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Triệu hồi <span class="npc">Asala</span> để mở cổng</div></div>
+            <div class="note tip">Nếu Asala bị tụt lại chỗ lính đất nung, reset checkpoint — cô ấy sẽ tự dịch chuyển tới bạn</div>
+            <div class="note tip">Hãy <strong>đi thẳng tới các lều chỉ huy</strong> để lấy loot trước khi mở cổng</div>
+            <div class="step" data-step="23"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Jamanra</span> (lần chạm trán đầu)</div></div>
+            <div class="step" data-step="24"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Xuống cầu thang, tìm checkpoint</div></div>
+            <div class="step" data-step="25"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- CARAVAN -->
+            <div class="zone-header">The Ardura Caravan</div>
+            <div class="step" data-step="26"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Shambrin</span>, <span class="npc">Zarka</span>, <span class="npc">Sekhema Asala</span></div></div>
+            <div class="step" data-step="27"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới <span class="loc">Trial of Sekhemas</span> → lấy WP <span class="reward-tag asc">Chạy sau ở Lvl 28</span></div></div>
+            <div class="step" data-step="28"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về → đi tới <span class="loc">Mastodon Badlands</span></div></div>
+
+            <!-- MASTODON BADLANDS -->
+            <div class="zone-header" id="mastodon">Mastodon Badlands <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="lvl">Lvl 19–20</span></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Vết nứt trên mặt đất.</strong> Để tìm <strong>Lightless Passage</strong> và lần ra abyssal ở đây, hãy tìm <strong>các vết nứt trên mặt đất</strong> — đi theo chúng là tới thẳng hang ổ, giúp bạn tìm và mở khóa <strong>Well of Souls</strong>.</div>
+            <div class="note tip">Chạy zone này TRƯỚC Keth — nó đẩy level của Keth lên để Kabala rơi gem Lvl 7</div>
+            <div class="step" data-step="29"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Shrine of Bones</span> (Effigy) gần checkpoint <span class="reward-tag gem">Support Gem Lv2</span></div></div>
+            <div class="step" data-step="30"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Bone Pits</span></div></div>
+
+            <!-- BONE PITS -->
+            <div class="zone-header" id="bonepits">The Bone Pits <span class="lvl">Lvl 20–21</span></div>
+            <div class="note tip">Mở <strong>Effigy ở checkpoint</strong> khi đi ngang qua</div>
+            <div class="step" data-step="31"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ linh cẩu cho tới khi <span class="item">Sun Clan Relic</span> rơi ra</div></div>
+            <div class="note tip">Linh cẩu cao (Goliath) có tỉ lệ rơi cao hơn. Để dành cho altar ở Valley of the Titans</div>
+            <div class="step" data-step="32"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Iktab &amp; Ekbab</span> → nhặt <span class="item">Mastodon Tusks</span></div></div>
+            <div class="note tip"><strong>Preserved Witness</strong> (mục tiêu Abyss): một mục tiêu bạn phải sống sót/hộ tống qua một chặng thử thách để lấy loot bậc cao. Thường xuất hiện ở <strong>Lightless Passage</strong> / <strong>Well of Souls</strong> cùng các mini-boss như <strong>Desiccated Lich</strong> — tùy chọn, phụ thuộc build</div>
+            <div class="step" data-step="33"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- CARAVAN -->
+            <div class="zone-header">The Ardura Caravan</div>
+            <div class="step" data-step="34"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Zarka</span></div></div>
+            <div class="step" data-step="35"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới <span class="loc">Keth</span></div></div>
+
+            <!-- KETH -->
+            <div class="zone-header" id="keth">Keth <span class="lvl">Lvl 22</span></div>
+            <div class="step" data-step="36"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ rắn cho tới khi <span class="item">Kabala Clan Relic</span> rơi ra</div></div>
+            <div class="step" data-step="37"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Abandoned Prayer</span> (xuống cầu thang) <span class="reward-tag optional">Magic Amulet</span></div></div>
+            <div class="step" data-step="38"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Kabala, Constrictor Queen</span> (<span class="loc">Venom Pit</span>) <span class="reward-tag">+2 Skill Points</span></div></div>
+            <div class="note tip">Rơi skill gem Lvl 7 vì đã làm Mastodon trước — hữu ích cho mọi class</div>
+            <div class="step" data-step="39"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Lost City</span></div></div>
+
+            <!-- LOST CITY -->
+            <div class="zone-header" id="lostcity">The Lost City <span class="lvl">Lvl 23</span></div>
+            <div class="step" data-step="40"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Hạ <span class="boss">Ninth Treasure of Keth</span> (<span class="loc">Galleria</span>) <span class="reward-tag optional">Jewel</span></div></div>
+            <div class="step" data-step="41"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Golden Tomb</span> <span class="reward-tag gem">Spirit Gem Lv7</span></div></div>
+            <div class="step" data-step="42"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Buried Shrines</span></div></div>
+
+            <!-- BURIED SHRINES -->
+            <div class="zone-header">Buried Shrines <span class="lvl">Lvl 23</span></div>
+            <div class="step" data-step="43"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Quan tài đá có lính canh <span class="reward-tag gem">Support Gem (Lesser Jeweller's Orb)</span></div></div>
+            <div class="step" data-step="44"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Chọn Offering (lửa/nước/sét) <span class="reward-tag optional">Resist Ring</span></div></div>
+            <div class="step" data-step="45"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Heart of Keth</span></div></div>
+
+            <!-- HEART OF KETH -->
+            <div class="zone-header">The Heart of Keth <span class="lvl">Lvl 24</span></div>
+            <div class="note tip">Đi xuống qua <strong>Vestibule</strong> (sàn sụp đổ, hydrozoid nổ axit) tới <strong>Halani Shrine</strong> ở dưới cùng — <span class="boss">Azarian</span> đang chờ ở đó</div>
+            <div class="step" data-step="46"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Azarian</span></div></div>
+            <div class="step" data-step="47"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện <span class="npc">Water Goddess (Halani)</span> → <span class="item">Everburning Cinders</span> → thắp lửa cho Goddess <span class="reward-tag">Essence of Water</span></div></div>
+            <div class="step" data-step="48"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- CARAVAN -->
+            <div class="zone-header">The Ardura Caravan</div>
+            <div class="step" data-step="49"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Zarka</span></div></div>
+            <div class="step" data-step="50"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới <span class="loc">Valley of the Titans</span></div></div>
+
+            <!-- VALLEY OF TITANS -->
+            <div class="zone-header" id="valley">Valley of the Titans <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 25</span></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Đầu titan.</strong> Những <strong>chiếc đầu titan</strong> khổng lồ bị chôn vùi nhìn thấy ngay từ lúc bạn bước vào. Mỗi cái có một lối vào gần đó dẫn tới một <strong>hẻm núi thẳng tắp</strong> ngắn với một seal ở cuối và một portal quay lại — nên bố cục cả zone hiện ra ngay thay vì phải mò mẫm.</div>
+            <div class="step" data-step="51"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm 3 <span class="item">Ancient Seal</span> (ở vòng ngoài)</div></div>
+            <div class="step" data-step="52"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm <span class="item">Medallion</span> (Relic Altar), đặt cả hai relic <span class="reward-tag choice">+1 Charm Slot + chọn buff</span></div></div>
+            <div class="note tip">Relic Altar nằm trên một <strong>đường phụ rẽ từ một trong các lối tới Ancient Seal</strong></div>
+            <div class="note tip">Thưởng <strong>+1 Charm Slot</strong> cùng lựa chọn của bạn: <strong>30% tăng Charm Charges nhận được</strong> HOẶC <strong>30% tăng thời lượng hiệu ứng Charm</strong> (có thể đổi sau)</div>
+            <div class="step" data-step="53"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Titan Grotto</span></div></div>
+
+            <!-- TITAN GROTTO -->
+            <div class="zone-header">The Titan Grotto <span class="lvl">Lvl 25–26</span></div>
+            <div class="step" data-step="54"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Zalmarath, the Colossus</span> → nhặt <span class="item">Flame Ruby</span></div></div>
+            <div class="step" data-step="55"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- CARAVAN -->
+            <div class="zone-header">The Ardura Caravan</div>
+            <div class="step" data-step="56"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Zarka</span> + <span class="npc">Sekhema Asala</span></div></div>
+            <div class="step" data-step="57"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới <span class="loc">Traitor's Passage</span> (đừng vào)</div></div>
+            <div class="step" data-step="58"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Thổi <span class="item">Horn</span> ở đỉnh caravan</div></div>
+            <div class="step" data-step="59"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Sekhema Asala</span></div></div>
+            <div class="step" data-step="60"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới <span class="loc">Deshar</span></div></div>
+
+            <!-- DESHAR -->
+            <div class="zone-header" id="deshar">Deshar <span class="lvl">Lvl 26–27</span></div>
+            <div class="step" data-step="61"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm/nhặt <span class="item">Fallen Dekhara</span> gần tháp <span class="reward-tag">+2 Skill Points</span></div></div>
+            <div class="note tip">Thư của Lihl Lima → giao cho Shambrin ở town</div>
+            <div class="step" data-step="62"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ 2 con <span class="boss">Vulture</span> ở khu vực phụ <span class="reward-tag asc">Djinn Barya dự phòng (Lvl 28)</span></div></div>
+            <div class="note success">Đây là đường ascend dễ — đơn giản hơn nhiều so với Balbala cho mọi class</div>
+            <div class="step" data-step="63"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">The Unremembered</span> (bộ xương) gần checkpoint <span class="reward-tag optional">Artificer's Orb</span></div></div>
+            <div class="step" data-step="64"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Path of Mourning</span></div></div>
+
+            <!-- PATH OF MOURNING -->
+            <div class="zone-header">Path of Mourning <span class="lvl">Lvl 27</span></div>
+            <div class="note tip">Cứ tin vào bản đồ overworld để định hướng — lối ra khá đơn giản</div>
+            <div class="step" data-step="65"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Encounter Shifting Vases / Hushed Urn <span class="reward-tag optional">4 rare + Support Gem Lv2</span></div></div>
+            <div class="step" data-step="66"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Spires of Deshar</span></div></div>
+
+            <!-- SPIRES OF DESHAR -->
+            <div class="zone-header" id="spires">The Spires of Deshar <span class="lvl">Lvl 27</span></div>
+            <div class="step" data-step="67"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tương tác với shrine <span class="item">Sisters of Garukhan</span> <span class="reward-tag">+10% Lightning Res</span></div></div>
+            <div class="step" data-step="68"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Tor Gul</span></div></div>
+            <div class="note warning">Một trong những trận khó nhất Act II — đủ cap lightning res, coi chừng đòn của defiler</div>
+            <div class="step" data-step="69"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town → nói chuyện với <span class="npc">Sekhema Asala</span> (×2)</div></div>
+
+            <!-- TRIAL OF SEKHEMAS -->
+            <div class="phase-header">Ascend ở Lvl 28</div>
+
+            <div class="zone-header" id="trial">Trial of the Sekhemas <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 28</span></div>
+            <div class="note change"><span class="label">0.5 QoL</span><strong>Reforging Bench</strong> giờ nằm ở lối vào Trial, và <strong>Runic Ward tối đa</strong> của bạn được cộng vào <strong>Honour</strong> khởi đầu. Ở <strong>Forbidden Rites</strong>, Verisium Anvil mở khóa ở <a href="poe2_act4_guide.html">Act 4</a>, nên lúc này bạn thường chưa có Runic Ward.</div>
+            <div class="step" data-step="70"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Khi vào, hãy tự chọn <span class="item">Djinn Barya Lvl 28</span> (từ kền kền Deshar) — <strong>không</strong> phải cái Balbala Lvl 22 mặc định</div></div>
+            <div class="step" data-step="71"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đặt <span class="action">relic affinity</span> để túi đồ gọn gàng</div></div>
+            <div class="step" data-step="72"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Thứ tự ưu tiên phòng: <span class="action">Ritual &gt; Chalice &gt; Hourglass &gt; Gauntlet</span></div></div>
+            <div class="note tip">Hourglass: hạ rare để cắt giảm đồng hồ · Chalice: chỉ ra vị trí các rare</div>
+            <div class="step" data-step="73"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hoàn thành trial → <span class="reward-tag asc">Ascendancy thứ 1</span></div></div>
+            <div class="note tip">Smith of Kitava (Warrior): cất một áo giáp trắng trước — ascend sẽ khóa bạn khỏi rương magic/rare áo giáp</div>
+
+            <!-- DREADNOUGHT -->
+            <div class="zone-header" id="dreadnought">The Dreadnought <span class="lvl">Lvl 28–29</span></div>
+            <div class="step" data-step="74"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Đi tới <span class="loc">The Dreadnought</span></div></div>
+            <div class="step" data-step="75"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Jamanra, the Abomination</span> (Act Boss)</div></div>
+            <div class="note tip">Đã bị phá giáp ngay từ đầu. ~55k sát thương vật lý = làm hắn choáng trước phase hàng rào sét</div>
+            <div class="step" data-step="76"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- END -->
+            <div class="zone-header">The Ardura Caravan (Cuối Act)</div>
+            <div class="step" data-step="77"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Ra khỏi caravan (góc trên bên trái) → nói chuyện <span class="npc">Hooded One</span> → chờ animation</div></div>
+            <div class="step" data-step="78"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Quay lại → nói chuyện <span class="npc">Sekhema Asala</span> → "Travel to the Sandswept Marsh"</div></div>
+            <div class="note success">Hoàn thành Act II — sang Act III</div>
+
+            <div class="footer-nav">
+                <a href="poe2_act1_guide.html">← Act I</a> <a href="index.html">Mục lục</a> <a href="poe2_act3_guide.html">Act III →</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer act-footer">
+        <div class="act-footer-row">
+            <span>Không chính thức, do fan làm. Path of Exile 2 thuộc bản quyền © Grinding Gear Games.</span> <span class="act-footer-links"><a href="https://github.com/tietvinhphu/poe2-leveling-vi/issues/new">Góp ý</a><a href="https://github.com/tietvinhphu/poe2-leveling-vi">GitHub</a></span>
+        </div>
+    </footer>
+    <script src="assets/league.js" defer></script>
+    <script src="assets/progress.js" defer></script>
+</body>
+</html>

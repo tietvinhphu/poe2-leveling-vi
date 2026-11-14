@@ -1,0 +1,152 @@
+<!--
+  PoE2 Leveling Campaign & Endgame Guide — League guide (seasonal)
+  Copyright (c) 2026 domistae
+  Licensed under the MIT License — see LICENSE for the full text.
+  Original source: https://github.com/domistae/poe2-leveling (English)
+  Vietnamese translation: https://github.com/tietvinhphu/poe2-leveling-vi
+  Live site (Vietnamese): https://tietvinhphu.github.io/poe2-leveling-vi/
+
+  You are free to use, modify, and redistribute this code, including for commercial purposes.
+  You MUST preserve this notice and provide attribution to the original source.
+  See README.md for full attribution requirements.
+
+  SEASONAL PAGE: everything about the current league lives here. Rewrite it
+  for each new league (see "Season change" in CLAUDE.md).
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <!-- DRAFT: remove this line (and add the page to sitemap.xml) when it is published -->
+    <meta name="robots" content="noindex">
+    <title>Hướng dẫn League PoE 2 — Conquerors of Wraeclast (1.0)</title>
+    <meta name="description" content="Hướng dẫn league Path of Exile 2 cho league ra mắt bản 1.0 Conquerors of Wraeclast: quân đội, lâu đài và các cuộc vây hãm trong campaign và endgame. Kèm Forbidden Rites, hoạt động đến 11 tháng 12.">
+    <meta name="author" content="domistae">
+    <meta name="theme-color" content="#181410">
+    <link rel="canonical" href="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_league_guide.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hướng dẫn Leveling PoE 2">
+    <meta property="og:title" content="Hướng dẫn League PoE 2 — Conquerors of Wraeclast (1.0)">
+    <meta property="og:description" content="Conquerors of Wraeclast, league ra mắt bản 1.0 của Path of Exile 2: chiêu mộ quân đội, xây lâu đài và vây hãm các thành trì đối thủ.">
+    <meta property="og:url" content="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_league_guide.html">
+    <meta property="og:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hướng dẫn League Path of Exile 2 — Conquerors of Wraeclast (1.0)">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hướng dẫn League PoE 2 — Conquerors of Wraeclast (1.0)">
+    <meta name="twitter:description" content="Conquerors of Wraeclast, league ra mắt bản 1.0 của Path of Exile 2: chiêu mộ quân đội, xây lâu đài và vây hãm các thành trì đối thủ.">
+    <meta name="twitter:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="assets/site.js"></script>
+    <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/checklist.css">
+    <link rel="stylesheet" href="assets/skin.css">
+    <link rel="stylesheet" href="assets/act.css">
+</head>
+<body class="act-page article-page">
+    <header class="site-head">
+        <div class="site-head-row">
+            <a href="index.html" class="brand">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2 L21 12 L12 22 L3 12 Z"/><path d="M12 7 L16 12 L12 17 L8 12 Z"/></svg>
+                <span>POE2 CODEX</span>
+            </a>
+            <nav class="site-nav" aria-label="Chính">
+                <a href="poe2_leveling_guide.html" class="site-nav-link">Leveling</a>
+                <a href="poe2_endgame_guide.html" class="site-nav-link">Endgame</a>
+                <a href="poe2_league_guide.html" class="site-nav-link current" aria-current="page">League</a>
+                <a href="https://github.com/tietvinhphu/poe2-leveling-vi" class="site-nav-link">GitHub</a>
+                <button type="button" class="theme-toggle" aria-label="Đổi giao diện">
+                    <span class="icon" id="theme-icon">☾</span> <span id="theme-label">Đêm</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="act-top">
+        <section class="act-head">
+            <div class="act-title"><span class="league-kicker">League</span><h1>Conquerors of Wraeclast</h1><span class="act-meta">League ra mắt bản 1.0 · từ 11/12/2026</span></div>
+        </section>
+    </div>
+
+    <main class="article">
+        <div class="note warn"><span class="label">Bản nháp</span>Trang này đang được viết. Nội dung dựa trên những gì Grinding Gear Games công bố tại ExileCon 2026; chi tiết có thể thay đổi trước khi ra mắt. Các mục đánh dấu <strong>Cần viết</strong> vẫn còn trống.</div>
+
+        <h2>League này là gì</h2>
+        <p>
+            <strong>Conquerors of Wraeclast</strong> là league ra mắt của <strong>Path of Exile 2 bản 1.0</strong>, bắt đầu vào <strong>11/12/2026</strong>. Nó thêm một lớp chiến lược lên game: bạn chiêu mộ quân đội, xây lâu đài và vây hãm các thành trì của kẻ địch. Trước mỗi trận, bạn bố trí quân rồi chiến đấu cùng họ.
+        </p>
+        <p>Bản 1.0 còn mang đến hai act cuối của campaign và hai class mới.</p>
+
+        <h2>Cơ chế của league</h2>
+        <div class="article-cols">
+            <section class="article-card">
+                <h3>Trong campaign <span>Act I–VI + Interlude</span></h3>
+                <ul>
+                    <li><strong>Mở đầu.</strong> Những lính đánh thuê đã đào ngũ khỏi Count nhờ bạn giúp giải cứu phần còn lại của băng nhóm.</li>
+                    <li><strong>Điểm tham quan.</strong> Hơn 70 điểm tham quan mới của league dọc theo campaign.</li>
+                    <li><strong>Các trận chiến.</strong> 23 trận chiến mà quân của bạn chiến đấu cùng bạn.</li>
+                </ul>
+            </section>
+            <section class="article-card">
+                <h3>Trong endgame <span>Atlas</span></h3>
+                <ul>
+                    <li><strong>100 lâu đài.</strong> Một bản đồ chung bên ngoài khu vực khởi đầu của Atlas, nơi các phe phái tranh giành quyền kiểm soát các lâu đài.</li>
+                    <li><strong>Chỉ huy.</strong> Các chỉ huy như Athela có thể chạy map thay bạn khi bạn vắng mặt.</li>
+                    <li><strong>Phần thưởng.</strong> Các boss league lớn, như Valen, the Dread Carnifex, rơi chìa khóa Treasury và một nguyên liệu craft mới để reforge vật phẩm.</li>
+                </ul>
+            </section>
+        </div>
+
+        <h2>Chiến lược và phần thưởng</h2>
+        <div class="article-todo"><strong>Cần viết:</strong> cách tiếp cận league lúc ra mắt, nên ưu tiên gì khi leveling, và những phần thưởng nào đáng săn.</div>
+
+        <h2>Thay đổi trong suốt league</h2>
+        <div class="article-todo"><strong>Cần viết:</strong> các bản hotfix và thay đổi cân bằng ảnh hưởng đến cơ chế, mới nhất xếp trước.</div>
+
+        <h2>Đến 11 tháng 12: Forbidden Rites <span class="h2-note">Patch 0.5.5 · đang chạy</span></h2>
+        <p>
+            <strong>Forbidden Rites</strong> là event league chạy đến khi ra bản 1.0. Cơ chế của nó là <strong>Ritual được làm lại</strong>, có nửa campaign và nửa endgame.
+        </p>
+        <div class="article-cols">
+            <section class="article-card">
+                <h3>Trong campaign <span>Act I–IV + Interlude</span></h3>
+                <ul>
+                    <li><strong>Mỗi khu vực có một Ritual.</strong> Mọi zone campaign đều có một encounter Ritual thưởng <strong>vật phẩm để leveling</strong>: crafting currency và một loạt trang bị.</li>
+                    <li><strong>Cụm Boss Ritual.</strong> <strong>Hai lần mỗi Act</strong> và <strong>một lần mỗi Interlude</strong>, các cụm <strong>Ritual Effigy</strong> xuất hiện trên World Map; mỗi boss bạn hạ sẽ được mang sang Ritual kế tiếp của cụm.</li>
+                    <li><strong>Phần thưởng chuỗi.</strong> Hoàn thành chuỗi và dùng <strong>Tribute đã tích lũy để đổi lấy Unique Item</strong>.</li>
+                    <li><strong>Aoife</strong> giới thiệu từng encounter; khi chơi nhóm, mọi người chơi trong khu vực phải nghe cô ấy thì Ritual mới bắt đầu.</li>
+                </ul>
+            </section>
+            <section class="article-card">
+                <h3>Trong endgame <span>Atlas · Map</span></h3>
+                <ul>
+                    <li><strong>Sacred Bloom</strong> thêm <strong>Viridian Wildwood</strong> vào một cụm Map: một khu rừng mù sương nơi bạn thu thập các dải <strong>Azmeri Wisp</strong>.</li>
+                    <li><strong>Wisp tăng sức mạnh cho map:</strong> quái mạnh hơn và thưởng hậu hơn, tùy theo các Wisp bạn đã gom.</li>
+                    <li><strong>Chồng Tablet</strong> thêm một Altar nếu có thể và thêm Wisp trong Wildwood.</li>
+                    <li><strong>Royal Lenience</strong> cho phép Tribute đã dâng <strong>Defer</strong> vật phẩm với chi phí cao hơn 500%; thành viên nhóm tự kiếm Tribute riêng.</li>
+                </ul>
+            </section>
+        </div>
+        <div class="note warn"><span class="label">Chưa kiểm chứng</span><strong>Các loại Wisp</strong> (Primal, Vivid, Wild, và có thể có Sacred Wisp) do cộng đồng suy ra từ league Affliction của PoE1 và không được nêu tên trong notes 0.5.5.</div>
+        <p>
+            <strong>Runes of Aldur</strong>, league trước đó, vẫn chạy song song. Phần lớn nó đã thành core ở 0.5.5: <strong>Farrow</strong>, <strong>Verisium Anvil</strong> (mở khóa ở <a href="poe2_act4_guide.html">Act IV</a>) và các encounter Expedition của nó. Trong các hướng dẫn act, ghi chú Runes of Aldur nằm trong hộp màu đỏ rượu; nút <strong>Ghi chú league</strong> sẽ hiện hoặc ẩn chúng.
+        </p>
+
+        <div class="footer-nav">
+            <a href="index.html">← Mục lục</a> <a href="poe2_leveling_guide.html">Leveling →</a>
+        </div>
+    </main>
+
+    <footer class="site-footer act-footer">
+        <div class="act-footer-row">
+            <span>Không chính thức, do fan làm. Path of Exile 2 thuộc bản quyền © Grinding Gear Games.</span> <span class="act-footer-links"><a href="https://github.com/tietvinhphu/poe2-leveling-vi/issues/new">Góp ý</a><a href="https://github.com/tietvinhphu/poe2-leveling-vi">GitHub</a></span>
+        </div>
+    </footer>
+</body>
+</html>

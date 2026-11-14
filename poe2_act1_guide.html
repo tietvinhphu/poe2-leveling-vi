@@ -1,0 +1,320 @@
+<!--
+  PoE2 Leveling Campaign & Endgame Guide — Act I — Clearfell to Ogham Manor
+  Copyright (c) 2026 domistae
+  Licensed under the MIT License — see LICENSE for the full text.
+  Original source: https://github.com/domistae/poe2-leveling (English)
+  Vietnamese translation: https://github.com/tietvinhphu/poe2-leveling-vi
+  Live site (Vietnamese): https://tietvinhphu.github.io/poe2-leveling-vi/
+
+  You are free to use, modify, and redistribute this code, including for commercial purposes.
+  You MUST preserve this notice and provide attribution to the original source.
+  See README.md for full attribution requirements.
+-->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Hướng dẫn Act 1 PoE 2 — Clearfell đến Ogham (Patch 0.5.5)</title>
+    <meta name="description" content="Hướng dẫn Act 1 Path of Exile 2 có theo dõi tiến độ. Lộ trình tối ưu, mọi skill point và phần thưởng vĩnh viễn từ Clearfell đến Ogham Manor. Patch 0.5.5 (Forbidden Rites).">
+    <meta name="author" content="domistae">
+    <meta name="theme-color" content="#181410">
+    <link rel="canonical" href="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_act1_guide.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Hướng dẫn Leveling PoE 2">
+    <meta property="og:title" content="Hướng dẫn Act 1 PoE 2 — Clearfell đến Ogham (Patch 0.5.5)">
+    <meta property="og:description" content="Lộ trình Act 1 tối ưu có theo dõi tiến độ — Clearfell đến Ogham, mọi skill point và phần thưởng vĩnh viễn. Patch 0.5.5.">
+    <meta property="og:url" content="https://tietvinhphu.github.io/poe2-leveling-vi/poe2_act1_guide.html">
+    <meta property="og:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Hướng dẫn Act 1 Path of Exile 2 — Clearfell đến Ogham Manor (Patch 0.5.5)">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hướng dẫn Act 1 PoE 2 — Clearfell đến Ogham (Patch 0.5.5)">
+    <meta name="twitter:description" content="Lộ trình Act 1 tối ưu có theo dõi tiến độ — Clearfell đến Ogham, mọi skill point và phần thưởng vĩnh viễn. Patch 0.5.5.">
+    <meta name="twitter:image" content="https://tietvinhphu.github.io/poe2-leveling-vi/og-image.png">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <script src="assets/site.js"></script>
+    <link rel="stylesheet" href="assets/base.css">
+    <link rel="stylesheet" href="assets/checklist.css">
+    <link rel="stylesheet" href="assets/skin.css">
+    <link rel="stylesheet" href="assets/act.css">
+</head>
+<body class="act-page" data-progress-key="poe2-act1-v05" data-reset-label="Act I">
+    <header class="site-head">
+        <div class="site-head-row">
+            <a href="index.html" class="brand">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2 L21 12 L12 22 L3 12 Z"/><path d="M12 7 L16 12 L12 17 L8 12 Z"/></svg>
+                <span>POE2 CODEX</span>
+            </a>
+            <nav class="site-nav" aria-label="Chính">
+                <a href="poe2_leveling_guide.html" class="site-nav-link current">Leveling</a>
+                <a href="poe2_endgame_guide.html" class="site-nav-link">Endgame</a>
+                <a href="poe2_league_guide.html" class="site-nav-link">League</a>
+                <a href="https://github.com/tietvinhphu/poe2-leveling-vi" class="site-nav-link">GitHub</a>
+                <button type="button" class="theme-toggle" aria-label="Đổi giao diện">
+                    <span class="icon" id="theme-icon">☾</span> <span id="theme-label">Đêm</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="act-strip" aria-label="Các Act">
+        <div class="act-strip-row">
+            <div class="act-tabs">
+            <a href="poe2_act1_guide.html" class="act-tab current" aria-current="page">Act I</a> <a href="poe2_act2_guide.html" class="act-tab">Act II</a> <a href="poe2_act3_guide.html" class="act-tab">Act III</a> <a href="poe2_act4_guide.html" class="act-tab">Act IV</a> <a href="poe2_interludes_guide.html" class="act-tab">Interlude</a> <span class="act-tab coming" title="Ra mắt cùng bản 1.0">Act V</span> <span class="act-tab coming" title="Ra mắt cùng bản 1.0">Act VI</span>
+            </div>
+            <div class="act-progress" title="Số bước đã xong trên trang này"><span class="act-progress-count" id="actProgressText">0 / 0</span><span class="act-progress-bar" aria-hidden="true"><span id="actProgressBar"></span></span><button type="button" class="act-reset" id="resetProgress" title="Xóa tiến độ trên trang này">Đặt lại</button></div>
+        </div>
+    </nav>
+
+    <div class="act-top">
+        <section class="act-head">
+            <div class="act-title"><span class="act-num">I</span><h1>Clearfell đến Ogham</h1><span class="act-meta">Lvl 1–14 · mọi class · 0.5.5</span></div>
+            <div class="act-filters" role="group" aria-label="Bộ lọc">
+                <button type="button" class="view-chip" data-view="hide-completed" aria-pressed="false" title="Ẩn các bước bạn đã tick xong">Ẩn mục đã xong</button>
+                <button type="button" class="view-chip" data-view="alt-leveling" aria-pressed="false" title="Chạy rút gọn: chỉ các bước cần thiết, mọi mục đánh dấu (Tùy chọn) đều bị ẩn">Chạy rút gọn</button>
+                <button type="button" class="view-chip league" data-view="league-notes" aria-pressed="true" title="Hiện hoặc ẩn ghi chú chỉ dành cho league">Ghi chú league</button>
+                <button type="button" class="view-chip cue-toggle" data-view="cue-notes" aria-pressed="true" title="Hiện hoặc ẩn các gợi ý trực quan"><svg class="eye-open" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg><span>Gợi ý</span></button>
+            </div>
+        </section>
+        <div class="act-rewards">
+            <span class="act-rewards-label">Phần thưởng Act</span> <span class="act-chip">+4 Weapon Set Skill Points</span> <span class="act-chip">+10% Cold Resistance</span> <span class="act-chip">+30 Spirit</span> <span class="act-chip">+20 Maximum Life</span> <span class="act-chip">Salvage Bench (nhân vật đầu tiên)</span> <span class="act-legend" role="group" aria-label="Bảng màu"> <span class="lg-boss">Boss</span><span class="lg-npc">NPC</span><span class="lg-loc">Địa điểm</span><span class="lg-gem">Gem</span><span class="lg-perm">Vĩnh viễn</span> </span>
+        </div>
+    </div>
+
+    <div class="container act-body">
+        <aside class="act-side">
+            <nav class="zone-rail" id="zoneRail" aria-label="Các zone"></nav>
+        </aside>
+
+        <main class="main">
+
+
+            <!-- RIVERBANK -->
+            <div class="zone-header" id="riverbank">Riverbank <span class="lvl">Lvl 1</span></div>
+            <div class="step" data-step="1"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Wounded Man</span>, trang bị vũ khí khởi đầu</div></div>
+            <div class="step" data-step="2"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Mở Large Chest, trang bị đồ + skill</div></div>
+            <div class="step" data-step="3"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">The Bloated Miller</span></div></div>
+            <div class="step" data-step="4"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Clearfell Encampment</span> sau lưng boss</div></div>
+
+            <!-- CLEARFELL ENCAMPMENT -->
+            <div class="zone-header" id="encampment">Clearfell Encampment <span class="wp town">TOWN</span> <span class="lvl">Lvl 2</span></div>
+            <div class="step" data-step="5"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Renly</span> <span class="reward-tag gem">Skill Gem Lv1</span></div></div>
+            <div class="step" data-step="6"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Clearfell</span></div></div>
+
+            <!-- CLEARFELL -->
+            <div class="zone-header" id="clearfell">Clearfell <span class="lvl">Lvl 2–3</span></div>
+            <div class="note change"><span class="label">0.5.5 Verisium Anvil</span>Trong <strong>Forbidden Rites</strong> (và Standard), Anvil <strong>không</strong> được mở khóa ở đây — bạn mở khóa nó bằng cách hoàn thành <strong>quest The Runeseeker ở Act 4</strong>. Sau đó, <span class="npc">Farrow</span> có thể được đặt trong <strong>Hideout ở mọi league</strong>, và Farrow / Dannig / Expedition trở thành nội dung Atlas cốt lõi. Xem <a href="poe2_act4_guide.html">hướng dẫn Act 4</a>.</div>
+            <div class="note league" data-league="runes-of-aldur">Ở league đó, việc mở khóa là một <strong>chuỗi ở Act 1</strong>: thu thập <strong>3 Runestone</strong> → <span class="loc">Lost Catacombs</span> → quay về <span class="loc">Clearfell</span>. Runeforging sau đó tiêu <strong>Verisium</strong> để thêm <strong>Runic Ward</strong>, một lớp tự hồi phục hấp thụ sát thương ở mức 1 máu. Bậc thang theo từng act (Armour Runeforging → Runic Inscriptions → Unique Runeforging → Ancient Runes) chỉ có trong league.</div>
+            <div class="step" data-step="8"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Beira of the Rotten Pack</span> (phía bắc) <span class="reward-tag">+10% Cold Res</span></div></div>
+            <div class="step" data-step="9"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Mud Burrow</span> → <span class="boss">The Devourer</span> <span class="reward-tag gem">Skill Gem Lv2</span></div></div>
+            <div class="note tip">Một <span class="loc">waypoint</span> nằm ngay cạnh <span class="loc">Mud Burrow</span>; cây cầu phía trước dẫn tới <span class="loc">The Grelwood</span></div>
+            <div class="note tip">Sau khi hạ boss, nói chuyện với <span class="npc">Renly</span> ở town để nhận Support Gem Lv1</div>
+            <div class="step" data-step="10"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Abandoned Stash</span> (bên trong <span class="loc">Mysterious Campsite</span>) <span class="reward-tag gem">Skill Gem Lv1</span></div></div>
+            <div class="step" data-step="11"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Grelwood</span></div></div>
+
+            <!-- GRELWOOD -->
+            <div class="zone-header" id="grelwood">The Grelwood <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 3–5</span></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Rễ cây phát sáng.</strong> Những rễ cây ma thuật phát sáng nhẹ luồn khắp Grelwood và đều chỉ cùng một hướng — về phía <span class="loc">Tree of Souls</span>. Ngoài ra, <strong>đi ngược dòng sông</strong> thì luôn dẫn bạn tới lối vào <span class="loc">Red Vale</span>.</div>
+            <div class="step" data-step="12"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm/triệu hồi/nói chuyện với <span class="npc">Una</span></div></div>
+            <div class="step" data-step="13"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Lấy <span class="loc">waypoint</span></div></div>
+            <div class="step" data-step="14"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Grim Tangle</span> → lấy WP → quay lại</div></div>
+            <div class="step" data-step="15"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Red Vale</span> → lấy WP → quay lại</div></div>
+            <div class="step" data-step="16"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Hạ <span class="boss">Gerung, the Brambleghast</span> <span class="reward-tag gem">Skill Gem Lv2</span></div></div>
+            <div class="step" data-step="17"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Túp lều có Cauldron (flask máu + mana cỡ vừa) → <span class="boss">Areagne</span> <span class="reward-tag gem">Support Gem Lv1</span></div></div>
+            <div class="note tip">Areagne là trận khó nhất giai đoạn đầu — frost bomb làm cô ta chậm, giúp trận này dễ xử lý hơn</div>
+            <div class="step" data-step="18"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Red Vale</span></div></div>
+
+            <!-- RED VALE -->
+            <div class="zone-header" id="redvale">The Red Vale <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 5–6</span></div>
+            <div class="step" data-step="19"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Tìm 3 <span class="item">Obelisk of Rust</span>, mỗi cái nhặt một Runed Girdle</div></div>
+            <div class="step" data-step="20"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="boss">The Rust King</span> xuất hiện ở obelisk cuối cùng <span class="reward-tag gem">Skill Gem Lv3</span></div></div>
+            <div class="note tip">Kite quái dưới chân hắn để giữ thời gian gây sát thương AoE</div>
+            <div class="step" data-step="21"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- BACK TO TOWN -->
+            <div class="zone-header">Clearfell Encampment</div>
+            <div class="step" data-step="22"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Renly</span>, nhận <span class="item">Runed Spikes</span></div></div>
+            <div class="step" data-step="23"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP tới <span class="loc">Grelwood</span></div></div>
+
+            <!-- GRELWOOD RETURN -->
+            <div class="zone-header">The Grelwood (quay lại)</div>
+            <div class="step" data-step="24"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Kích hoạt 3 <span class="item">Runic Seal</span></div></div>
+            <div class="step" data-step="25"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Una</span></div></div>
+            <div class="step" data-step="26"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- TOWN AGAIN -->
+            <div class="zone-header">Clearfell Encampment</div>
+            <div class="step" data-step="27"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Una</span></div></div>
+            <div class="step" data-step="28"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP tới <span class="loc">Grim Tangle</span></div></div>
+
+            <!-- GRIM TANGLE -->
+            <div class="zone-header" id="grimtangle">Grim Tangle <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 6</span></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Nấm và quan tài.</strong> Từng cụm <strong>nấm</strong> trên mặt đất nghĩa là lối vào <span class="loc">Grim Tangle</span> ở gần — đi theo chúng về phía Druid. Một dải <strong>quan tài</strong> riêng chạy về phía <span class="loc">Cemetery of the Eternals</span>. Hai hướng này tách nhau, nên hãy chọn dải khớp với mục tiêu của bạn.</div>
+            <div class="step" data-step="29"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Hạ <span class="boss">Ervig, the Rotted Druid</span> <span class="reward-tag gem">Support Gem</span></div></div>
+            <div class="step" data-step="30"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Cemetery of the Eternals</span></div></div>
+
+            <!-- CEMETERY -->
+            <div class="zone-header" id="cemetery">Cemetery of the Eternals <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="lvl">Lvl 6–9</span></div>
+            <div class="step" data-step="31"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Lachlann the Lost</span></div></div>
+            <div class="step" data-step="32"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Ancient Ruins</span> (quan tài đá gần checkpoint) <span class="reward-tag optional">Iron hoặc Lazuli Ring</span></div></div>
+            <div class="step" data-step="33"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="loc">Mausoleum of the Praetor</span> → <span class="boss">Draven</span> → <span class="item">Draven's Memorial Key Piece</span>, TP về</div></div>
+            <div class="step" data-step="34"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="loc">Mausoleum of the Praetor</span> — kho giấu <span class="item">Forgotten Riches</span> <span class="reward-tag gem">Support Gem 1</span> <span class="reward-tag optional">Loot</span> <span class="reward-tag craft">Gold</span></div></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Công tắc cột sáng.</strong> Kho <span class="item">Forgotten Riches</span> nằm sau một quan tài đá lớn gần checkpoint. <strong>Công tắc ẩn nằm trên một cây cột gần đó và sáng lên khi bạn tới gần</strong> — ánh sáng đó chính là dấu hiệu. Chỉ có loot (gold + rương rare, không đảm bảo có món đồ nào), và có thể lặp lại bằng cách reset zone từ waypoint.</div>
+            <div class="step" data-step="35"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="loc">Tomb of the Consort</span> → <span class="boss">Asinia</span> → <span class="item">Asinia's Memorial Key Piece</span>, TP về</div></div>
+            <div class="step" data-step="67"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Bí mật <span class="item">Haunted Treasure</span> <span class="reward-tag gem">Support Gem Lv1</span></div></div>
+            <div class="step" data-step="36"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Mở <span class="item">Memorial Gate</span> cạnh Lachlann</div></div>
+            <div class="step" data-step="37"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Lachlann</span>, nhặt Ring <span class="reward-tag gem">Skill Gem Lv3</span></div></div>
+            <div class="step" data-step="38"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Thoát ra <span class="loc">Hunting Grounds</span> — lấy <span class="item">Waypoint</span> <span class="reward-tag">WP</span></div></div>
+            <div class="step" data-step="39"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- TOWN -->
+            <div class="zone-header">Clearfell Encampment</div>
+            <div class="step" data-step="40"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">Finn</span>, <span class="npc">Una</span>, <span class="npc">The Hooded One</span></div></div>
+            <div class="note tip"><span class="label">Hồi sinh</span> <span class="npc">The Hooded One</span> được hồi sinh khi bạn quay lại — giờ đã có thể dùng <strong>Identify</strong></div>
+
+            <!-- HUNTING GROUNDS -->
+            <div class="zone-header" id="hunting">Hunting Grounds <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 10</span></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Dấu vết châu chấu.</strong> Hoàn thành <strong>encounter ritual</strong> nhỏ của zone này sẽ sinh ra một <strong>dải châu chấu</strong> chạy thẳng tới lối vào <span class="loc">Freythorn</span>. Chuỗi ritual luôn chỉ về cái gần nhất tiếp theo — mẹo này còn dùng được ở ritual endgame.</div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Vệt máu + biển chỉ đường.</strong> <strong>Crowbell</strong> mổ xác gia súc và để lại <strong>vệt máu</strong> dẫn thẳng tới boss — con đường "từ nông trại đến bàn ăn" tới <span class="boss">The Crowbell</span>. Một <strong>biển chỉ đường ven đường</strong> chỉ hướng đi tiếp tới <span class="loc">Ogham Farmlands</span> — Farmlands đi trước, Village là zone sau đó.</div>
+            <div class="step" data-step="42"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Nói chuyện với <span class="npc">Delwyn</span> — chỉ để bắt đầu cơ chế wisp</div></div>
+            <div class="step" data-step="43"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">The Crowbell</span> <span class="reward-tag">+2 Skill Points</span></div></div>
+            <div class="note warning">Coi chừng đòn slam — có thể one-shot. Boss bỏ chạy khi còn ít máu, kite cẩn thận</div>
+            <div class="step" data-step="44"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Freythorn</span> → lấy WP → quay lại</div></div>
+            <div class="step" data-step="45"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Ogham Farmlands</span> → lấy WP → quay lại</div></div>
+            <div class="step" data-step="46"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Sự kiện ritual nhỏ (không nằm gần đầu zone) — <strong>hãy làm cái này</strong>, nó sinh ra dải châu chấu <span class="reward-tag gem">Support Gem Lv1</span></div></div>
+            <div class="step" data-step="47"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP tới <span class="loc">Freythorn</span></div></div>
+
+            <!-- FREYTHORN -->
+            <div class="zone-header" id="freythorn">Freythorn <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 11–12</span></div>
+            <div class="step" data-step="48"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Kích hoạt 3 <span class="item">Ritual Altar</span> nhỏ</div></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Dải khói.</strong> Altar lớn ở giữa tỏa <strong>khói</strong> vươn về phía từng cái trong ba <span class="item">Ritual Altar</span> nhỏ — đi theo một dải khói là dẫn thẳng tới một altar. Không cần quét cả zone.</div>
+            <div class="step" data-step="49"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Big Ritual Altar → hạ <span class="boss">The King in the Mists</span> <span class="reward-tag">+30 Spirit</span> <span class="reward-tag gem">Spirit Gem Lv4 (Persistent Buff)</span></div></div>
+            <div class="note tip"><span class="npc">Aoife</span> xuất hiện trong trận này (chỉ class Druid?) và rơi một spirit gem</div>
+            <div class="note warning">Phase 2: né totem triệu hồi + curse (đứng yên hay liên tục di chuyển sẽ khác nhau)</div>
+            <div class="step" data-step="50"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Ominous Altar</span> → thanh tẩy, rồi nhận một Charm từ <span class="npc">Finn</span> ở town <span class="reward-tag optional">Ruby/Sapphire/Topaz Charm</span></div></div>
+            <div class="step" data-step="51"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP tới <span class="loc">Ogham Farmlands</span></div></div>
+
+            <!-- OGHAM FARMLANDS -->
+            <div class="zone-header" id="oghamfarm">Ogham Farmlands <span class="wp">WAYPOINT</span> <span class="lvl">Lvl 12</span></div>
+            <div class="step" data-step="52"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="item">Una's Lute Box</span> trong ngôi nhà gần checkpoint → <span class="item">Una's Lute</span> <span class="reward-tag">+2 Skill Points</span></div></div>
+            <div class="note tip">Giao cho Una ở town để nhận thưởng</div>
+            <div class="step" data-step="53"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Chó rare trong crop circle <span class="reward-tag gem">Skill Gem Lv4</span></div></div>
+            <div class="step" data-step="54"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Ogham Village</span></div></div>
+
+            <!-- OGHAM VILLAGE -->
+            <div class="zone-header" id="oghamvillage">Ogham Village <button type="button" class="cue-mark" data-view="cue-notes" aria-pressed="true" aria-label="Gợi ý trực quan trong zone này: hiện hoặc ẩn" title="Gợi ý trực quan trong zone này — hiện hoặc ẩn"><svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg><svg class="eye-shut" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><path d="M4.5 4.5l15 15"/></svg></button> <span class="lvl">Lvl 12–13</span></div>
+            <div class="step" data-step="55"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="action">(nhân vật đầu tiên)</span> <span class="item">Smithing Tools</span> trong nhà <span class="reward-tag craft">Salvage Bench</span></div></div>
+            <div class="note cue"><span class="label">Gợi ý trực quan</span><strong class="cue-title">Đường lát đá.</strong> Đi theo <strong>con đường lát đá cuội</strong> xuyên qua làng — nó chạy thẳng tới <strong>nhà thợ rèn</strong>. Cứ đi trên đá thay vì cắt ngang giữa các căn nhà là bạn sẽ tới Smithing Tools và Blacksmith's Chest mà không phải tìm.</div>
+            <div class="step" data-step="56"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> <span class="item">Blacksmith's Chest</span> cùng ngôi nhà <span class="reward-tag optional">Blank Rune + Artificer's Orb</span></div></div>
+            <div class="step" data-step="57"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">The Executioner</span> <span class="reward-tag gem">Support Gem Lv1</span></div></div>
+            <div class="note tip">Trận này chủ yếu diễn ra ở phía bắc của làng</div>
+            <div class="step" data-step="58"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Lên lầu → gạt cần → nói chuyện với <span class="npc">Leitis</span></div></div>
+            <div class="step" data-step="59"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">The Manor Ramparts</span></div></div>
+
+            <!-- MANOR RAMPARTS -->
+            <div class="zone-header" id="ramparts">The Manor Ramparts <span class="lvl">Lvl 13</span></div>
+            <div class="step" data-step="60"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content"><span class="skip">(Tùy chọn)</span> Bí mật <span class="item">Gallows</span> (sợi dây trên người bị treo, gần checkpoint) <span class="reward-tag gem">Support Gem Lv1</span></div></div>
+            <div class="note tip">Hãy chắc là bạn có flask Lvl 10 + áo giáp Lvl 11 trước khi vào Manor — an toàn hơn nhiều</div>
+            <div class="step" data-step="61"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Vào <span class="loc">Ogham Manor</span></div></div>
+
+            <!-- OGHAM MANOR -->
+            <div class="zone-header" id="manor">Ogham Manor <span class="lvl">Lvl 13–14</span></div>
+            <div class="step" data-step="62"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Hạ <span class="boss">Candlemass</span> (tầng 1) <span class="reward-tag">+20 Max Life</span></div></div>
+            <div class="note tip">Thường sau lối đi đầu tiên (khi bạn lần đầu thấy Count), đôi khi sớm hơn — rơi Essence + belt kháng đôi</div>
+            <div class="step" data-step="63"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Xuống tầng dưới → hạ <span class="boss">Geonor</span> (Act Boss)</div></div>
+            <div class="note tip">Đi xuống Manor: mỗi tầng đi theo hướng ngược với tầng phía trên — lần theo đường bạn đã băng qua lối đi</div>
+            <div class="note warning">Phase 2: lăn né dưới kiếm của hắn. Frost bomb ở đầu Phase 2 làm hắn chậm</div>
+            <div class="step" data-step="64"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">TP về town</div></div>
+
+            <!-- FINAL TOWN -->
+            <div class="zone-header">Clearfell Encampment (Cuối Act)</div>
+            <div class="step" data-step="65"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với tất cả NPC</div></div>
+            <div class="step" data-step="66"><div class="step-check"><div class="checkbox"></div></div>
+                <div class="step-content">Nói chuyện với <span class="npc">The Hooded One</span> → "Follow the Beast's Trail"</div></div>
+            <div class="note success">Hoàn thành Act I — sang Act II</div>
+
+            <div class="footer-nav">
+                <a href="index.html">← Mục lục</a> <a href="poe2_act2_guide.html">Act II →</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer act-footer">
+        <div class="act-footer-row">
+            <span>Không chính thức, do fan làm. Path of Exile 2 thuộc bản quyền © Grinding Gear Games.</span> <span class="act-footer-links"><a href="https://github.com/tietvinhphu/poe2-leveling-vi/issues/new">Góp ý</a><a href="https://github.com/tietvinhphu/poe2-leveling-vi">GitHub</a></span>
+        </div>
+    </footer>
+    <script src="assets/league.js" defer></script>
+    <script src="assets/progress.js" defer></script>
+</body>
+</html>
